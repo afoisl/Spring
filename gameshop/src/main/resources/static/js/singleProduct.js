@@ -53,4 +53,29 @@ function displaySingleProduct(data) {
   game.appendChild(img);
   game.appendChild(lowBox);
   product.appendChild(game);
+
+  document.querySelector(".cartBtn").addEventListener("click", () => {
+    sessionCurrent(data);
+  });
+}
+
+function sessionCurrent(data) {
+  axios
+    .get("http://localhost:8080/user/current", { withCredentials: true })
+    .then((response) => {
+      console.log("데이터 : ", response.data);
+      if (response.status == 200) {
+        const userId = response.data;
+        let cartItems = JSON.parse(localStorage.getItem(userId));
+        if (!cartItems) {
+          cartItems = [];
+        }
+        cartItems.push(data);
+        localStorage.setItem(userId, JSON.stringify(cartItems));
+      }
+    })
+    .catch((error) => {
+      console.log("에러 발생 : ", error);
+      alert("로그인해주세요.");
+    });
 }
