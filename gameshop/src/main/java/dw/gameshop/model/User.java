@@ -1,9 +1,6 @@
 package dw.gameshop.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @NoArgsConstructor
@@ -20,6 +18,9 @@ import java.util.List;
 @Getter
 @Entity
 @Table(name="user")
+// spring security 가 사용하기 위한 UserDetails
+// UserDetails 를 상속함으로서 권한을 갖게 됨
+// Authority Entity 를 생성해야 함
 public class User implements UserDetails {
     @Id
     @Column(name="user_id", length=100)
@@ -30,12 +31,16 @@ public class User implements UserDetails {
     private String email;
     @Column(name="password")
     private String password;
+    @ManyToOne
+    @JoinColumn(name = "user_authority")
+    private Authority authority;
     @Column(name="created_at", updatable = false)
     private LocalDateTime createdAt;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("user"));
+        return Collections.singletonList(
+                new SimpleGrantedAuthority(authority.getAuthorityName()));
     }
 
     @Override

@@ -85,11 +85,10 @@ document.querySelector(".signupEnd").addEventListener("click", () => {
       .post(urlSignup, data, { withCredentials: true })
       .then((response) => {
         console.log("데이터:", response);
-        if (data != null) {
-          alert("회원가입 되었습니다! 추카추~");
-          document.querySelector(".login-box").classList.remove("hidden");
-          document.querySelector(".signup-box").classList.add("hidden");
-        }
+        alert("회원가입 완료");
+        document.querySelector(".login-box").classList.remove("hidden");
+        document.querySelector(".signup-box").classList.add("hidden");
+        window.location.reload();
       })
       .catch((error) => {
         console.log("에러 발생:", error);
@@ -108,7 +107,7 @@ function sessionCurrent() {
           document.querySelector(".login-box").classList.add("hidden");
           document.querySelector(".user-box").classList.remove("hidden");
           document.querySelector(".user-box p").textContent =
-            response.data + "님, 환영합니다.";
+            response.data.userId + "님, 환영합니다.";
         }
       }
     })
