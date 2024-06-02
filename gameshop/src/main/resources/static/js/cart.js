@@ -46,17 +46,20 @@ function sessionCurrent(data) {
 function displayCart(games) {
   const tbody = document.querySelector(".cart-body");
   let totalPrice = 0;
-  games.forEach((data) => {
+  games.forEach((data, index) => {
     // 태그 요소 생성
     const tr = document.createElement("tr");
     const imgtd = document.createElement("td");
     const title = document.createElement("td");
     const genre = document.createElement("td");
     const price = document.createElement("td");
+    const deBtn = document.createElement("td");
     const img = document.createElement("img");
+
     // 클래스이름 생성
     imgtd.classList.add("imgtd");
     img.classList.add("img");
+    deBtn.classList.add("deBtn");
     // 태그속성 추가
     img.src = data.image;
     title.textContent = data.title;
