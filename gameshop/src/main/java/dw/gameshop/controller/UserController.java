@@ -35,13 +35,14 @@ public class UserController {
     }
 
     @PostMapping("signup")
-    public ResponseEntity<String> signUp(@RequestBody UserDto userDto, HttpServletRequest request) {
+    public ResponseEntity<String> signUp(@RequestBody UserDto userDto) {
         return new ResponseEntity<>(userService.saveUser(userDto),
                 HttpStatus.CREATED);
     }
 
     @PostMapping("login")
-    public ResponseEntity<String> login(@RequestBody UserDto userDto, HttpServletRequest request) {
+    public ResponseEntity<String> login(@RequestBody UserDto userDto,
+                                        HttpServletRequest request) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(userDto.getUserId(), userDto.getPassword())
         );

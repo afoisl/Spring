@@ -72,6 +72,9 @@ function sessionCurrent(data) {
         }
         cartItems.push(data);
         localStorage.setItem(userId, JSON.stringify(cartItems));
+        if (response.status == 200) {
+          alert("장바구니에 담겼습니다.");
+        }
       }
     })
     .catch((error) => {
