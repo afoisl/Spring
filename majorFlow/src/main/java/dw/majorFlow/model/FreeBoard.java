@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,16 +10,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 @Table(name = "free_board")
 public class FreeBoard {
     @Id
-    @Column
+    @Column(name = "freeBoard_id")
     private String freeBoardId;
 
     @Column
     private String text;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "user_id")
     private User user;
 }

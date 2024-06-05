@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,16 +10,19 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 @Table(name = "review")
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long reviewID;
 
-    @Column(name = "user_id")
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name = "lecture_id")
+    @ManyToOne
+    @JoinColumn(name = "lecture_id")
     private Lecture lecture;
 
     @Column(name = "review_text")

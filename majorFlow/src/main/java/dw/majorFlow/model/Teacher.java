@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 @Table(name = "teacher")
 public class Teacher {
     @Id
@@ -17,7 +18,7 @@ public class Teacher {
     private String teacherId;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Column(name = "teacher_name")

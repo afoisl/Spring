@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,9 +7,9 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 @Table(name = "reply")
 public class Reply {
-
     @Id
     @Column(name = "reply_id")
     private String replyId;

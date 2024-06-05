@@ -1,4 +1,4 @@
-package dw.majorFlow.exception;
+package dw.majorflow.exception;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

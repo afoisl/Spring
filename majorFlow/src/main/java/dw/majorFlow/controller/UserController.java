@@ -1,7 +1,7 @@
-package dw.majorFlow.controller;
+package dw.majorflow.controller;
 
-import dw.majorFlow.model.User;
-import dw.majorFlow.service.UserService;
+import dw.majorflow.model.User;
+import dw.majorflow.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,9 +1,9 @@
-package dw.majorFlow.config;
+package dw.majorflow.config;
 
 
-import dw.majorFlow.exception.MyAccessDeniedHandler;
-import dw.majorFlow.exception.MyAuthenticationEntryPoint;
-import dw.majorFlow.service.UserDetailService;
+import dw.majorflow.exception.MyAccessDeniedHandler;
+import dw.majorflow.exception.MyAuthenticationEntryPoint;
+import dw.majorflow.service.UserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

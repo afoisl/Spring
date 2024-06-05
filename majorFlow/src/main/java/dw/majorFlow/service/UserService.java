@@ -1,7 +1,7 @@
-package dw.majorFlow.service;
+package dw.majorflow.service;
 
-import dw.majorFlow.model.User;
-import dw.majorFlow.repository.UserRepository;
+import dw.majorflow.model.User;
+import dw.majorflow.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,6 +16,11 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.userRepository = userRepository;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
 
     public List<User> getUsersAll() {
         return userRepository.findAll();

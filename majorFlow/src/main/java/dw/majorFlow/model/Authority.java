@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,5 +19,4 @@ public class Authority {
     @Id
     @Column(name = "authority_name", length = 50)
     private String authorityName;
-
 }

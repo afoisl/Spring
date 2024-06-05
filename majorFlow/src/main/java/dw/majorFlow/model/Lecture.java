@@ -1,4 +1,4 @@
-package dw.majorFlow.model;
+package dw.majorflow.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,12 +10,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity
 @Table(name = "lecture")
 public class Lecture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int lectureId;
+    private long lectureId;
 
     @Column(name = "lecture_name")
     private String lectureName;
@@ -23,7 +24,7 @@ public class Lecture {
     @Column
     private String subject;
 
-    @Column
+    @Column(name = "play_time")
     private int playTime;
 
     @ManyToOne

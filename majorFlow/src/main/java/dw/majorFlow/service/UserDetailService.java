@@ -1,7 +1,7 @@
-package dw.majorFlow.service;
+package dw.majorflow.service;
 
-import dw.majorFlow.model.User;
-import dw.majorFlow.repository.UserRepository;
+import dw.majorflow.model.User;
+import dw.majorflow.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
