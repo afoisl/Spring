@@ -21,8 +21,8 @@ public class Lecture {
     @Column(name = "lecture_name")
     private String lectureName;
 
-    @Enumerated(EnumType.STRING)
-    private Category category;
+    @Column
+    private String category;
 
     @Column(name = "play_time")
     private int playTime;
