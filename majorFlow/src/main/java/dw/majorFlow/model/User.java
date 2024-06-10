@@ -35,8 +35,8 @@ public class User {
     @Column
     private String address;
 
-    @Column
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     @Column
     private String email;
@@ -47,5 +47,4 @@ public class User {
     @ManyToOne
     @JoinColumn
     private Authority authority;
-
 }
