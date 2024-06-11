@@ -14,4 +14,10 @@ public class UserDto {
     private String password;
     private String userName;
     private String nickname;
+    private String email;
+    private String gender;
+    private String phoneNumber;
+    private String address;
+    private String birthDate;
+    private String genre;
 }
