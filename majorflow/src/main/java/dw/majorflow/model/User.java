@@ -20,29 +20,32 @@ public class User {
     @Column(name = "user_id")
     private String userId;
 
-    @Column(name = "user_name")
+    @Column(name = "user_name", nullable = false)
     private String userName;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "birth_date")
+    @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
 
-    @Column(name = "phone_number")
+    @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
 
-    @Column
+    @Column(nullable = false)
     private String address;
 
-    @Column
-    private String  gender;
+    @Column(nullable = false)
+    private String gender;
 
-    @Column
+    @Column(nullable = false)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String nickname;
+
+    @Column(nullable = false)
+    private String genre;
 
     @ManyToOne
     @JoinColumn

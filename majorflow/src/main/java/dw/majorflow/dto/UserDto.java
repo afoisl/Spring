@@ -5,19 +5,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 public class UserDto {
     private String userId;
-    private String password;
     private String userName;
-    private String nickname;
-    private String email;
-    private String gender;
+    private String password;
+    private LocalDate birthDate;
     private String phoneNumber;
     private String address;
-    private String birthDate;
+    private String gender;
+    private String email;
+    private String nickname;
     private String genre;
 }

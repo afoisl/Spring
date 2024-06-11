@@ -1,5 +1,6 @@
 package dw.majorflow.controller;
 
+import dw.majorflow.dto.UserDto;
 import dw.majorflow.model.User;
 import dw.majorflow.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,18 +18,15 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//    public UserController() {
-//    }
-
     @GetMapping("/user")
     public ResponseEntity<List<User>> getUsersAll() {
         return new ResponseEntity<>(userService.getUsersAll(),
                 HttpStatus.OK);
     }
 
-    @PostMapping("/user/save")
-    public ResponseEntity<User> saveUser(@RequestBody User user) {
+    @PostMapping("/user/signup")
+    public ResponseEntity<String> signUp(@RequestBody UserDto user) {
         return new ResponseEntity<>(userService.saveUser(user),
-                HttpStatus.OK);
+                HttpStatus.CREATED);
     }
 }
