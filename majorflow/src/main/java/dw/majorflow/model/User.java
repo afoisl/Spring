@@ -52,6 +52,7 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String genre;
 
+    @ManyToOne
     @JoinColumn
     private Authority authority;
 
