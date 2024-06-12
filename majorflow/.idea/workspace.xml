@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ViewController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/고객센터.js" afterDir="false" />
@@ -24,10 +23,12 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/장바구니.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/학원소개.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/로그인.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/로그인.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/로그인.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/로그인.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/로그인.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" afterDir="false" />
@@ -64,6 +65,9 @@
         <option name="mavenHome" value="Use Maven wrapper" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
