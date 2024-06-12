@@ -15,9 +15,9 @@ import java.util.Optional;
 @Service
 @Transactional
 public class UserService {
-    @Autowired
+
     private UserRepository userRepository;
-    @Autowired
+
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
