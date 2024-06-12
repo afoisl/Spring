@@ -1,0 +1,646 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 전체 설정*/
+body {
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+}
+.box1 {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+}
+.box2 {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.box3 {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  margin-top: 50px;
+}
+.wbox {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* 상단 메뉴바 설정*/
+.mainMenu {
+  display: grid;
+  grid-template-columns: 2fr 5fr 3fr;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.mainMenu > div {
+  color: white;
+  margin-top: 30px;
+}
+
+.centerMenu {
+  padding: 40px;
+}
+
+.rightMenu {
+  padding: 10px;
+}
+
+.mainMenu > div > span:hover {
+  color: gray;
+}
+
+.title {
+  background-color: black;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  padding-top: 200px;
+}
+
+.subMenu {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.subMenu > div {
+  padding: 40px 20px 40px 0px;
+}
+
+.subMenu > div:hover {
+  color: gray;
+}
+
+.logo,
+.cartIcon,
+.mypageIcon {
+  width: 25px;
+  height: 25px;
+}
+
+/* 연혁 페이지 설정*/
+
+.historyTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.historyImg {
+  background-color: gray;
+  height: 600px;
+  width: 500px;
+  margin: 30px 30px 30px 0px;
+}
+
+.historyBox1 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.historyText1 {
+  margin: 30px 30px 30px 30px;
+}
+
+/* 강사진 페이지 설정*/
+.teacherTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+}
+
+.teacher {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.teacherInfo {
+  height: 400px;
+  width: 250px;
+  margin: 30px;
+}
+
+.teacherPicture {
+  background-color: rgb(160, 131, 187);
+  height: 350px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.teacherPicture img {
+  transition: all 0.2s linear;
+  width: inherit;
+}
+
+.teacherPicture:hover img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.teacherName {
+  margin: 10px 0px 5px 0px;
+}
+
+.teacherSubject {
+  margin: 5px 0px 5px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 강사 프로필 설정 */
+.singleTeacherTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+}
+
+.singleTeacher {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.singleTeacher1 {
+  background-color: white;
+}
+
+.singleTeacher1 img {
+  height: 450px;
+  width: 400px;
+  width: inherit;
+}
+
+.singleTeacherText {
+  font-size: 10px;
+  padding: 50px 50px 30px 0px;
+  line-height: 30px;
+  margin: 30px 50px 0px 0px;
+}
+
+.singleTeacher1 > div {
+  font-size: 20px;
+  padding: 10px 0px 0px 0px;
+}
+
+.singleTeacher2 > div {
+  font-size: 20px;
+  padding: 0px 50px 30px 0px;
+  line-height: 40px;
+}
+
+/*수강안내*/
+
+.courseBox,
+.detailedBox,
+.tasteBox,
+.pirceGuideBox {
+  font-size: 40px;
+  margin: 30px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
+  font-weight: bold;
+}
+
+.allCourse {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.allCourseClick {
+  margin: 20px 0 20px 0;
+}
+
+.allCourseClickImg {
+  background-color: gray;
+  width: 300px;
+  height: 300px;
+}
+.detailedBox2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.8fr 1.2fr;
+}
+.detailedBox2Img {
+  width: 700px;
+  height: 650px;
+  background-color: grey;
+  margin-bottom: 30px;
+}
+.detailedBox2Text {
+  width: 600px;
+  height: 650px;
+}
+.detailedBox2Text2 {
+  width: 100%;
+  height: 800px;
+}
+
+.tasteCourse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.tasteCourseClick {
+  margin: 20px 0 20px 0;
+}
+.tasteCourseClickAvi {
+  background-color: gray;
+  width: 500px;
+  height: 300px;
+}
+.coursePriceGuide {
+  width: 100%;
+  height: 800px;
+  border: 1px solid black;
+}
+.horizontal-line {
+  width: 90%;
+  height: 2px;
+  background-color: #000;
+  margin: 40px 800px 5px 80px;
+}
+#priceGuide1 {
+  font-size: 70px;
+  margin: 20px 0 10px 100px;
+}
+#priceGuide2 {
+  font-size: 70px;
+  margin: 20px 0 10px 100px;
+}
+.priceGuide3 {
+  font-size: 40px;
+  margin: 20px 0 0px 100px;
+}
+.priceGuide4 {
+  font-size: 90px;
+  margin: 0px 80px 10px 0px;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+}
+#priceGuide5 {
+  font-size: 25px;
+  margin: 40px 80px 10px 0px;
+  display: flex;
+  justify-content: end;
+}
+
+/* 수강신청 페이지 설정 */
+
+.enrollmentTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+}
+
+.enrollment {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.lectureEnrollInfo {
+  height: 100px;
+  width: 400px;
+}
+
+.lectureEnrollimg {
+  background-color: gray;
+  height: 400px;
+  width: 400px;
+}
+
+.lectureEnrollname {
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+}
+.teacherEnrollname {
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+}
+
+.cartEnrollBtn {
+  height: 40px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 35px;
+  float: right;
+  margin: 5px 0px 5px 0px;
+}
+
+.cartEnrollBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* 나의 진도율 페이지 설정 */
+
+.progressTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+}
+
+.selectSearchBox {
+  display: flex;
+  justify-content: center;
+}
+
+.selectSubjectBtn {
+  height: 50px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 45px;
+  font-size: 20px;
+  padding: 0px 10px;
+  margin: 30px 10px;
+  color: gray;
+}
+
+.searchSubjectBtn {
+  height: 50px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 45px;
+  font-size: 20px;
+  padding: 0px 10px;
+  margin: 30px 10px;
+  color: gray;
+}
+
+.searchIcon {
+  height: 50px;
+  width: 50px;
+  margin: 30px 0px;
+  background-color: gray;
+}
+
+.progressTitleBox {
+  display: flex;
+  justify-content: left;
+}
+
+.progressSubjectName {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+.progressSubjectInfo {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+.progressInfoBox {
+  height: 700px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.progressInfo {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.progressInfoStudent {
+  font-size: 30px;
+  padding: 0px 10px;
+  margin: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+.progressInfoGraph {
+  height: 50px;
+  width: 700px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 40px;
+}
+
+.progressInfoGraphColor {
+  height: 50px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+/* 성적확인 페이지 설정 */
+.gradeTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+}
+
+.gradeInfoBox {
+  height: 700px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.gradeSubjectName {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+.gradeSubjectInfo {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+/* 로그인 화면 */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+  width: 100%;
+  overflow: hidden;
+}
+.ring {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.login {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.login h2 {
+  font-size: 2em;
+  color: #fff;
+}
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.login .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: medium;
+}
+.login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.login .links .find-password {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 5px 10px 0px 10px;
+}
+
+.login .links .signup-link {
+  padding: 0 20px;
+}
+
+.login .sign-inBx input[type="submit"] {
+  width: 100%;
+  background: rgb(94, 94, 94);
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  transition: 0.3s;
+}
+.login .sign-inBx {
+  position: relative;
+  width: 100%;
+}
+
+.login .sign-inBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.login .sign-inBx input:hover {
+  background: rgb(51, 51, 51);
+}
