@@ -14,8 +14,8 @@ import lombok.Setter;
 @Table(name = "teacher")
 public class Teacher {
     @Id
-    @Column(name = "teacher_id")
-    private String teacherId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long teacherId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

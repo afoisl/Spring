@@ -14,8 +14,8 @@ import lombok.Setter;
 @Table(name = "free_board")
 public class FreeBoard {
     @Id
-    @Column(name = "freeBoard_id")
-    private String freeBoardId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long freeBoardId;
 
     @Column
     private String text;

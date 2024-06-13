@@ -11,8 +11,8 @@ import lombok.*;
 @Table(name = "reply")
 public class Reply {
     @Id
-    @Column(name = "reply_id")
-    private String replyId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long replyId;
 
     @Column(name = "reply_text")
     private String replyText;
