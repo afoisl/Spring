@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/LectureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/LectureRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/LectureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,25 +50,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.MajorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.dw.majorflow.MajorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.majorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.majorflowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/First_project/Backend&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.MajorFlowApplication.executor": "Run",
+    "Application.dw.majorflow.MajorFlowApplication.executor": "Run",
+    "Application.majorFlowApplication.executor": "Run",
+    "Application.majorflowApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/admin/Downloads/majorflow",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\Documents\GitHub\majorFlow\src\main\java\dw\majorFlow\exception" />
