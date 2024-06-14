@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/LectureController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/LectureRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/LectureService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
