@@ -118,7 +118,7 @@
   font-size: 30px;
   font-weight: 500;
   position: absolute;
-  bottom: -490px;
+  bottom: px;
   left: 0px;
   transform: translateX(-100%);
   opacity: 0;
@@ -1261,195 +1261,165 @@ body {
 
 /* 회원가입 추후에 수정필요 */
 
+/* 회원가입 추후에 수정필요 */
+
+/* 회원가입 추후에 수정필요 */
+
+html {
+  height: 100%;
+  background: #223;
+  display: grid;
+  place-items: center;
+  overflow: auto; /* Ensures content is scrollable if it exceeds viewport height */
+}
+
+.box {
+  width: 80vmin;
+  padding: 20px;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn; /* For animation. */
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+
+  border: solid 5px transparent;
+  border-radius: 2em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+
+  background:
+    /* padding-box clip this background in to the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* border-box extends this background to the border space */
+    var(--gradient-border) border-box,
+    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    var(--main-bg) border-box;
+
+  background-position: center center;
+
+  animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 .signup {
   background-color: #2a2a2a;
-  width: 1920px;
-  height: 1600px;
-  padding: 30px 360px 30px 360px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 30px;
+  box-sizing: border-box;
+  overflow: auto; /* Ensures content is scrollable if it exceeds viewport height */
 }
 .signup > div {
   color: white;
 }
 .signupBox1 {
-  font-size: 64px;
+  font-size: 32px;
   font-weight: 700;
-  color: white;
-  margin: 0 0 30px 0;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-align: center;
 }
 .signupBox2 {
-  width: 1200px;
-  height: 207px;
-  border: 1px solid white;
-  margin: auto;
-}
-.signupBox2-1 {
-  font-size: 40px;
-  font-weight: 400px;
-  margin: 40px 0 0 75px ;
-  color: white;
-}
-.signupBox2-2 {
-  font-size: 40px;
-  font-weight: 400px;
-  margin: 20px 0 20px 400px ;
-  color: white;
+  width: 100%;
+  max-width: 700px;
 }
 .signupBoxGrid {
-  margin: 20px 63px 20px 63px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .signupBox3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .signupBox3-1 {
-  width: 167px;
-  height: 50px;
-  font-size: 24px;
-  line-height: 50px;
-  margin-right: 10px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 .signupBox3-2 {
-  width: 264px;
-  height: 50px;
-  margin-right: 10px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  color: black; /* 입력 글자 색상을 검정으로 변경 */
 }
 .signupBox3-3 {
-  width: 649px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
+  font-size: 12px;
+  color: #bbb;
 }
 .signupBox3-4 {
-  width: 328px;
-  height: 50px;
-  background-color: white;
-  color: black;
-  line-height: 50px;
-  display: grid;
-  grid-template-columns: 2fr 3fr 2fr 3fr;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-.signupBox3-5 {
-  width: 805px;
-  height: 50px;
-  margin-right: 10px;
-}
-.signupBox3-6 {
-  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 .el_ttl {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-.el_result {
-  height: 20px;
+.el_input {
+  width: calc(100% - 10px);
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  color: black; /* 입력 글자 색상을 검정으로 변경 */
 }
 .el_btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  outline: unset;
-  border: unset;
-
   padding: 10px;
   background: #333333;
   border-radius: 5px;
   color: #ffffff;
-
-  font-family: Noto Sans KR;
-  letter-spacing: -0.04em;
-  text-align: left;
-
-  width: fit-content;
-  height: 37px;
-  font-family: Noto Sans KR;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
-
-  word-break: keep-all;
+  cursor: pointer;
 }
 .el_btn--outline {
   background: unset;
-  border: 1px solid #333333;
-  color: #333333;
-  font-family: Noto Sans KR;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
-  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
-.el_input {
-  padding: 10px;
-  /* max-width: 320px; */
-  width: 100%;
-  height: 37px;
-  border: 1px solid #d4d4d4;
-  border-radius: 5px;
-  color: #fff;
-  background-color: unset;
-
-  font-family: Noto Sans KR;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
+.el_input + .el_btn, .el_input + .el_input, .el_btn + .el_btn {
+  margin-top: 10px;
 }
-.el_input::placeholder {
-  color: #d4d4d4;
-}
-.el_input:disabled {
-  background-color: #f0f0f0;
-}
-.bl_stack {
+.signupBoxCheckBox {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 10px;
-}
-.bl_stack--row {
-  flex-direction: row;
-}
-.form {
-  margin-bottom: 20px;
-  height: fit-content;
-}
-.hp_shrink-0 {
-  flex-shrink: 0;
-}
-.signupBoxCheckBox-1{
-  width: 95px;
-  height: 34px;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 34px;
-  font-weight: bold;
-  margin: 0 10px;
 }
 .signupBoxCheckBoxGrid {
   display: flex;
-  margin-right: 45px;
-  margin-bottom: 18px;
+  align-items: center;
 }
-.signupBox4 {
-  width: 141px;
-  height: 48px;
+.signupBoxCheckBox-1 {
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
   text-align: center;
-  background-color: white;
-  border-radius: 50px;
-  color: black;
-  margin: 43px auto;
-  font-weight: 700;
-  line-height: 48px;
-
 }
+
+
+
 
 .hidden {
   display: none;
