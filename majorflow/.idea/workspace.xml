@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/LectureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/LectureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/LectureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/LectureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/LectureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/LectureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +68,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/Downloads/majorflow",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/spring/Spring/majorflow",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -137,7 +146,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
   </component>

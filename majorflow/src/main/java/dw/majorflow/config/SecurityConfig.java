@@ -32,10 +32,12 @@ public class SecurityConfig {
                 .authorizeRequests(auth -> auth
                         .requestMatchers(
                                 new AntPathRequestMatcher("/user/**"),
+                                new AntPathRequestMatcher("/lectures/**"),
                                 new AntPathRequestMatcher("/css/**"),
                                 new AntPathRequestMatcher("/js/**"),
                                 new AntPathRequestMatcher("/login"),
-                                new AntPathRequestMatcher("/majorflow/**")
+                                new AntPathRequestMatcher("/majorflow/**"),
+                                new AntPathRequestMatcher("/products/**")
                         ).permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form->form.loginPage("/login").defaultSuccessUrl("/articles"))
