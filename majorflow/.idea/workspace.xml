@@ -4,56 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dump/_user__202406141025.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dump/authority_202406141018.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/dw/majorFlow/majorflowApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAccessDeniedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAccessDeniedHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/ResourceNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Authority.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Authority.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/FreeBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/FreeBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/enrollment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mypage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/signup.html" afterDir="false" />
-    </list>
+    <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +54,7 @@
     "Application.majorflowApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/Documents/GitHub/spring/Spring/majorflow",
