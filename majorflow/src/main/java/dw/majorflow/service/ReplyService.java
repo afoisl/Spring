@@ -15,6 +15,6 @@ public class ReplyService {
     ReplyRepository replyRepository;
 
     public String saveReply(Reply reply) {
-        return replyRepository;
+        return reply.getReplyText();
     }
 }

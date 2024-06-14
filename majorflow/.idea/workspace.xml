@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ReplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/ReplyDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/ReplyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/ReplyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ReplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ReplyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/ReplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
