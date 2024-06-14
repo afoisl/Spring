@@ -8,7 +8,6 @@ import dw.majorflow.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -46,10 +45,15 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<String> signUp(@RequestBody UserDto user) {
-        return new ResponseEntity<>(userService.saveUser(user),
-                HttpStatus.CREATED);
+    public ResponseEntity<Integer> signUp(@RequestBody UserDto user) {
+        String result = userService.saveUser(user);
+        if ("0".equals(result)) {
+            return new ResponseEntity<>(0, HttpStatus.CONFLICT);
+        } else {
+        return new ResponseEntity<>(1, HttpStatus.CREATED);
+        }
     }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody UserDto userDto, HttpServletRequest request) {
         Authentication authentication = authenticationManager.authenticate(

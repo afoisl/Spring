@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/ReplyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/ReviewDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReplyDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

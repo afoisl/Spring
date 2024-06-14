@@ -30,8 +30,11 @@ public class UserService {
     }
 
     public String saveUser(UserDto userDto) {
-        Optional<User> userOptional = userRepository.findByUserId(userDto.getUserId());
-        if (userOptional.isPresent()){return "이미 등록된 ID";}
+        Optional<User> userById = userRepository.findByUserId(userDto.getUserId());
+        Optional<User> userByNickname = userRepository.findByNickname(userDto.getNickname());
+        if (userById.isPresent() || userByNickname.isPresent()) {
+            return "0"; // userId 또는 nickname 중 하나라도 중복되는 경우
+        }else {
         Authority authority = new Authority();
         authority.setAuthorityName("ROLE_USER");
         User user = new User(
@@ -47,5 +50,6 @@ public class UserService {
                 userDto.getGenre(),
                 authority);
         return userRepository.save(user).getUserId();
+        }
     }
 }
