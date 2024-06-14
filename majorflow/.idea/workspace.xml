@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="" />
+    <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/ReplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/ReplyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/ReplyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/ReplyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
