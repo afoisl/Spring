@@ -24,3 +24,5 @@ public class LectureController {
         return new ResponseEntity<>(lectureService.getAllLectures(), HttpStatus.OK);
     }
 }
+
+
