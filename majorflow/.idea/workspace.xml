@@ -4,42 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="">
-<<<<<<< HEAD
+    <list default="true" id="fc6fd8a8-458f-4c0c-8848-6c9d99656357" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReplyDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" afterDir="false" />
-=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/signup.html" afterDir="false" />
->>>>>>> cc3e5a9826db3a8742f67aedfbcb06ddb7cfc558
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -54,59 +59,29 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2hOzxrvCIpfoLz9vxY5q0nvt2bG" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2hrXWnJVKFCDbjZZLBGv801GyzD" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.MajorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.dw.majorflow.MajorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.majorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.majorflowApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/spring/Spring/majorflow&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/GitHub/Spring/majorflow&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\Documents\GitHub\majorFlow\src\main\java\dw\majorFlow\exception" />
-      <recent name="C:\Users\admin\Documents\GitHub\majorFlow\src\main\java\dw\majorFlow\config" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.dw.majorflow.MajorFlowApplication">
+  <component name="RunManager">
     <configuration name="MajorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dw.majorFlow.MajorFlowApplication" />
-      <module name="majorFlow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dw.majorFlow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dw.majorflow.MajorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dw.majorflow.MajorFlowApplication" />
       <module name="majorflow" />
       <extension name="coverage">
@@ -119,71 +94,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="majorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dw.majorflow.majorFlowApplication" />
-      <module name="majorFlow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dw.majorflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="majorflowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dw.majorflow.majorflowApplication" />
-      <module name="majorFlow" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dw.majorflow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.dw.majorflow.MajorFlowApplication" />
         <item itemvalue="Application.MajorFlowApplication" />
-        <item itemvalue="Application.majorFlowApplication" />
-        <item itemvalue="Application.majorflowApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="45bbec45-d61a-48fa-add4-109abf5deab1" name="Changes" comment="" />
-      <created>1717480160416</created>
+      <changelist id="fc6fd8a8-458f-4c0c-8848-6c9d99656357" name="Changes" comment="" />
+      <created>1718353203769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1717480160416</updated>
+      <updated>1718353203769</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
