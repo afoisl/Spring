@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7899795c-f93f-492c-806b-0d129bc56be0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MajorFlowApplication.executor": "Run",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration name="MajorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dw.majorflow.MajorFlowApplication" />
@@ -19,5 +37,8 @@
         <item itemvalue="Application.MajorFlowApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
   </component>
 </project>
