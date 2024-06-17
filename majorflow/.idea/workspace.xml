@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="ChangeListManager">
-    <list default="true" id="cf2b722d-2a67-4899-8166-48b3478f4626" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/signup.html" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MajorFlowApplication.executor": "Run",
-    "git-widget-placeholder": "main"
-  }
-}]]></component>
   <component name="RunManager">
     <configuration name="MajorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dw.majorflow.MajorFlowApplication" />
@@ -46,19 +19,5 @@
         <item itemvalue="Application.MajorFlowApplication" />
       </list>
     </recent_temporary>
-  </component>
-<<<<<<< HEAD
-=======
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
->>>>>>> 1a7cf3b33882541a77787573860b653b0efd4d92
-  <component name="TaskManager">
-    <servers />
   </component>
 </project>
