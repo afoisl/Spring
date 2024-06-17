@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7899795c-f93f-492c-806b-0d129bc56be0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
