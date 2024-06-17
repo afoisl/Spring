@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc6fd8a8-458f-4c0c-8848-6c9d99656357" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

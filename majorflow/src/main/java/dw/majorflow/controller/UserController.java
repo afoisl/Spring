@@ -24,11 +24,8 @@ import java.util.List;
 public class UserController {
 
     private UserService userService;
-
     private UserDetailService userDetailService;
-
     private AuthenticationManager authenticationManager;
-
     private HttpServletRequest httpServletRequest;
 
     public UserController(UserService userService, UserDetailService userDetailService, AuthenticationManager authenticationManager, HttpServletRequest httpServletRequest) {
@@ -40,8 +37,7 @@ public class UserController {
 
     @GetMapping("/user")
     public ResponseEntity<List<User>> getUsersAll() {
-        return new ResponseEntity<>(userService.getUsersAll(),
-                HttpStatus.OK);
+        return new ResponseEntity<>(userService.getUsersAll(), HttpStatus.OK);
     }
 
     @PostMapping("/signup")
@@ -50,7 +46,7 @@ public class UserController {
         if ("0".equals(result)) {
             return new ResponseEntity<>(0, HttpStatus.CONFLICT);
         } else {
-        return new ResponseEntity<>(1, HttpStatus.CREATED);
+            return new ResponseEntity<>(1, HttpStatus.CREATED);
         }
     }
 
@@ -69,10 +65,10 @@ public class UserController {
     @PostMapping("/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
-        if ( session != null) {
+        if (session != null) {
             session.invalidate();
         }
-        return "Yoy have been logged out.";
+        return "You have been logged out.";
     }
 
     @GetMapping("/current")
@@ -85,5 +81,17 @@ public class UserController {
         sessionDto.setUserId(authentication.getName());
         sessionDto.setAuthority(authentication.getAuthorities());
         return sessionDto;
+    }
+
+    @PostMapping("/check-id")
+    public ResponseEntity<Boolean> checkDuplicateId(@RequestBody UserDto userDto) {
+        boolean exists = userService.checkDuplicateId(userDto.getUserId());
+        return new ResponseEntity<>(exists, exists ? HttpStatus.CONFLICT : HttpStatus.OK);
+    }
+
+    @PostMapping("/check-nickname")
+    public ResponseEntity<Boolean> checkDuplicateNickname(@RequestBody UserDto userDto) {
+        boolean exists = userService.checkDuplicateNickname(userDto.getNickname());
+        return new ResponseEntity<>(exists, exists ? HttpStatus.CONFLICT : HttpStatus.OK);
     }
 }
