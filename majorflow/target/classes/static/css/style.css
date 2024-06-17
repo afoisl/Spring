@@ -1076,14 +1076,14 @@ body {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
 }
-#reviewBox7Grid-1 {
+.reviewBox7Grid-1 {
   width: 143px;
   height: 43px;
   border: 1px solid black;
   text-align: center;
   line-height: 43px;
 }
-#reviewBox7Grid-2 {
+.reviewBox7Grid-2 {
   width: 143px;
   height: 26px;
   border: 1px solid black;
@@ -1091,14 +1091,14 @@ body {
   line-height: 26px;
   margin-top: 5px;
 }
-#reviewBox7Grid-3 {
+.reviewBox7Grid-3 {
   width: 140px;
   height: 26px;
   border: 1px solid black;
   text-align: center;
   margin-top: 15px;
 }
-#reviewBox7Grid-4 {
+.reviewBox7Grid-4 {
   width: 143px;
   font-size: 24px;
   text-align: center;
