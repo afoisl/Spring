@@ -1308,195 +1308,270 @@ body {
 
 /* 회원가입 추후에 수정필요 */
 
-.signup {
-  background-color: #2a2a2a;
-  width: 1920px;
-  height: 1600px;
-  padding: 30px 360px 30px 360px;
-}
-.signup > div {
-  color: white;
-}
-.signupBox1 {
-  font-size: 64px;
-  font-weight: 700;
-  color: white;
-  margin: 0 0 30px 0;
-}
-.signupBox2 {
-  width: 1200px;
-  height: 207px;
-  border: 1px solid white;
-  margin: auto;
-}
-.signupBox2-1 {
-  font-size: 40px;
-  font-weight: 400px;
-  margin: 40px 0 0 75px;
-  color: white;
-}
-.signupBox2-2 {
-  font-size: 40px;
-  font-weight: 400px;
-  margin: 20px 0 20px 400px;
-  color: white;
-}
-.signupBoxGrid {
-  margin: 20px 63px 20px 63px;
-}
-.signupBox3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 10px;
-}
-.signupBox3-1 {
-  width: 167px;
-  height: 50px;
-  font-size: 24px;
-  line-height: 50px;
-  margin-right: 10px;
-}
-.signupBox3-2 {
-  width: 264px;
-  height: 50px;
-  margin-right: 10px;
-}
-.signupBox3-3 {
-  width: 649px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 16px;
-}
-.signupBox3-4 {
-  width: 328px;
-  height: 50px;
-  background-color: white;
-  color: black;
-  line-height: 50px;
-  display: grid;
-  grid-template-columns: 2fr 3fr 2fr 3fr;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-.signupBox3-5 {
-  width: 805px;
-  height: 50px;
-  margin-right: 10px;
-}
-.signupBox3-6 {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-.el_ttl {
-  font-size: 18px;
-  font-weight: bold;
-}
-.el_result {
-  height: 20px;
-}
-.el_btn {
-  display: inline-flex;
-  align-items: center;
+
+body {
+  display: flex;
   justify-content: center;
-  outline: unset;
-  border: unset;
-
-  padding: 10px;
-  background: #333333;
-  border-radius: 5px;
-  color: #ffffff;
-
-  font-family: Noto Sans KR;
-  letter-spacing: -0.04em;
-  text-align: left;
-
-  width: fit-content;
-  height: 37px;
-  font-family: Noto Sans KR;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
-
-  word-break: keep-all;
+  align-items: center;
+  min-height: 100vh;
+  background: #223;
+  padding: 20px;
 }
-.el_btn--outline {
-  background: unset;
-  border: 1px solid #333333;
-  color: #333333;
-  font-family: Noto Sans KR;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
-  background-color: #ffffff;
-}
-.el_input {
-  padding: 10px;
-  /* max-width: 320px; */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 37px;
-  border: 1px solid #d4d4d4;
-  border-radius: 5px;
-  color: #000;
-  background-color: unset;
+  max-width: 700px;
+}
 
-  font-family: Noto Sans KR;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 17px;
-  letter-spacing: -0.04em;
-  text-align: left;
+.signup {
+  width: 100%;
+  background: #2a2a2a;
+  border-radius: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.el_input::placeholder {
-  color: #d4d4d4;
+
+.signupBox {
+  padding: 20px;
+  width: 100%;
 }
-.el_input:disabled {
-  background-color: #f0f0f0;
+
+.signupBox1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.bl_stack {
+
+.signupBox2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.bl_stack--row {
-  flex-direction: row;
-}
-.form {
-  margin-bottom: 20px;
-  height: fit-content;
-}
-.hp_shrink-0 {
-  flex-shrink: 0;
-}
-.signupBoxCheckBox-1 {
-  width: 95px;
-  height: 34px;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 34px;
-  font-weight: bold;
-  margin: 0 10px;
-}
-.signupBoxCheckBoxGrid {
-  display: flex;
-  margin-right: 45px;
-  margin-bottom: 18px;
-}
-.signupBox4 {
-  width: 141px;
-  height: 48px;
-  text-align: center;
-  background-color: white;
-  border-radius: 50px;
-  color: black;
-  margin: 43px auto;
-  font-weight: 700;
-  line-height: 48px;
+  gap: 15px;
 }
 
+.signupBox3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.signupBox3-1 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+.signupBox3-2 {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #444;
+  outline: none;
+}
+
+.signupBox3-2:focus {
+  border-color: #007bff;
+}
+
+.signupBox3-3 {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 5px;
+}
+
+.signupBox3-4 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.el_ttl {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+.el_input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #444;
+  outline: none;
+}
+
+.el_input:focus {
+  border-color: #007bff;
+}
+
+.el_btn {
+  width: 120px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.el_btn:hover {
+  background: #0056b3;
+}
+
+.signupBoxCheckBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.signupBoxCheckBox label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.signupBoxCheckBox input[type="checkbox"] {
+  accent-color: #007bff;
+}
+
+.signupBox3-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 98%;
+}
+
+.signupBox3-result {
+  margin-top: 5px;
+}
+
+.el_btn--primary {
+  background: #28a745;
+  color: white;
+}
+
+.el_btn--primary:hover {
+  background: #218838;
+}
+
+.bl_stack .el_btn,
+.bl_stack .el_input {
+  margin-top: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  .address-margin {
+    margin-top: 25px;
+  }
+
+  .signupBoxButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* .signupBox2 내에 추가된 스타일을 확인 */
+.signupBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 버튼 기본 스타일 유지 */
+.el_btn {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.el_btn:hover {
+    background: #0056b3;
+}
+
+.el_btn--primary {
+    background: #28a745;
+    color: white;
+}
+
+.el_btn--primary:hover {
+    background: #218838;
+}
+
+  --border-angle: 0turn; /* For animation. */
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+  );
+
+  border: solid 5px transparent;
+  border-radius: 2em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+
+  background:
+    /* padding-box clip this background in to the overall element except the border. */
+    var(--main-bg) padding-box,
+    /* border-box extends this background to the border space */
+    var(--gradient-border) border-box,
+    /* Duplicate main background to fill in behind the gradient border. You can remove this if you want the border to extend "outside" the box background. */
+    var(--main-bg) border-box;
+
+  background-position: center center;
+
+  animation: bg-spin 6s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
 .hidden {
   display: none;
 }
