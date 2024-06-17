@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9070ab22-9bbe-4761-b238-abb7dd84dd51" name="Changes" comment="" />
+=======
+    <list default="true" id="7899795c-f93f-492c-806b-0d129bc56be0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
+    </list>
+>>>>>>> 4f8e72f86762081fa6ce50dffc953e42cc1e3541
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +27,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+=======
+    "Application.MajorFlowApplication.executor": "Run",
+>>>>>>> 4f8e72f86762081fa6ce50dffc953e42cc1e3541
     "git-widget-placeholder": "main"
   }
 }]]></component>
