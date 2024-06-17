@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="9070ab22-9bbe-4761-b238-abb7dd84dd51" name="Changes" comment="" />
+=======
     <list default="true" id="7899795c-f93f-492c-806b-0d129bc56be0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
@@ -41,6 +44,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/signup.html" afterDir="false" />
     </list>
+>>>>>>> 4f8e72f86762081fa6ce50dffc953e42cc1e3541
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< HEAD
+=======
     "Application.MajorFlowApplication.executor": "Run",
+>>>>>>> 4f8e72f86762081fa6ce50dffc953e42cc1e3541
     "git-widget-placeholder": "main"
   }
 }]]></component>
