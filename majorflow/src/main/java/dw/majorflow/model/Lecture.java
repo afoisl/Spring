@@ -33,7 +33,7 @@ public class Lecture {
     @Column(name = "play_time")
     private int playTime;
 
-    @Column(name = "lecture_text")
+    @Column(name = "lecture_text", length = 65535)
     private String lectureText;
 
     @ManyToOne
