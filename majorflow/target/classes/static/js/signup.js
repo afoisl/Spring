@@ -43,6 +43,7 @@ function isValidNickname(nickname) {
 async function checkDuplicateId() {
     const userId = document.getElementById('userId').value;
     const duplicateResultElement = document.getElementById('duplicate-check-result');
+    const data = {userId:userId.value}
 
     // 초기화
     duplicateResultElement.innerText = '';
