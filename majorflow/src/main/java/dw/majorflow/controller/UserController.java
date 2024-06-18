@@ -43,13 +43,9 @@ public class UserController {
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<Integer> signUp(@RequestBody UserDto user) {
-        String result = userService.saveUser(user);
-        if ("0".equals(result)) {
-            return new ResponseEntity<>(0, HttpStatus.CONFLICT);
-        } else {
-            return new ResponseEntity<>(1, HttpStatus.CREATED);
-        }
+    public ResponseEntity<String> signUp(@RequestBody UserDto userDto) {
+        return new ResponseEntity<>(userService.saveUser(userDto),
+                HttpStatus.CREATED);
     }
 
     @PostMapping("/login")
