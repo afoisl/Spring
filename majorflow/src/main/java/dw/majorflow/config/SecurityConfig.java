@@ -40,7 +40,8 @@ public class SecurityConfig {
                                 new AntPathRequestMatcher("/majorflow/**"),
                                 new AntPathRequestMatcher("/products/**"),
                                 new AntPathRequestMatcher("/reply/**"),
-                                new AntPathRequestMatcher("/review/**")
+                                new AntPathRequestMatcher("/review/**"),
+                                new AntPathRequestMatcher("/cart/**")
                         ).permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form->form.loginPage("/login").defaultSuccessUrl("/articles"))

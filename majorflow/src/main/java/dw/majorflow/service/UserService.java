@@ -23,6 +23,15 @@ public class UserService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
+    public User getUserById(String userId) {
+        Optional<User> userOptional = userRepository.findByUserId(userId);
+        if (userOptional.isPresent()) {
+            return userOptional.get();
+        } else {
+            throw new RuntimeException("User not found with id: " + userId);
+        }
+    }
+
     public List<User> getUsersAll() {
         return userRepository.findAll();
     }
