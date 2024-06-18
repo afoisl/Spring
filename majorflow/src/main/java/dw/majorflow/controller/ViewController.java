@@ -43,4 +43,7 @@ public class ViewController {
 
     @GetMapping("majorflow/cart.html")
     public String cart() {return "cart"; }
+
+    @GetMapping("majorflow/lecture.html")
+    public String lecture() {return "lecture"; }
 }
