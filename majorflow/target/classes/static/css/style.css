@@ -140,6 +140,7 @@
   flex-direction: column;
   align-items: end;
   padding: 20px;
+  cursor: pointer;
 }
 
 .menuContents > div {
@@ -246,6 +247,7 @@ body {
 
 .rightMenu {
   padding: 10px;
+  cursor: pointer;
 }
 
 .mainMenu > div > span:hover {
