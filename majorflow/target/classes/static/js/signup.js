@@ -1,6 +1,17 @@
 const urlSignup = "http://localhost:8080/user/signup";
 const urlCheckId = "http://localhost:8080/user/check-id";
 
+let signupUserId = "";
+let signupUserName = "";
+let signupPassword = "";
+let signupBirthDate = "";
+let signupPhoneNumber = "";
+let signupAddress = "";
+let signupGender = "";
+let signupEmail = "";
+let signupNickname = "";
+let signupGenre = "";
+
 function findAddr() {
   new daum.Postcode({
     oncomplete: function (data) {
@@ -73,7 +84,7 @@ async function checkDuplicateId() {
     }
   } catch (error) {
     console.error("Error checking ID:", error);
-    resultElement.innerText = "아이디 중복 체크 중 오류가 발생했습니다.";
+    resultElement.innerText = "이미 사용 중인 아이디입니다.";
     resultElement.style.color = "red";
   }
 }
@@ -108,6 +119,7 @@ async function checkDuplicateNickname() {
       resultElement.style.color = "green";
     }
   } catch (error) {
+    resultElement.innerText = "이미 사용 중인 닉네임입니다.";
     console.error("Error checking Nickname:", error);
   }
 }
@@ -153,13 +165,13 @@ function register() {
     return;
   }
 
-  const authorityChecked = document.querySelector(
+  /* const authorityChecked = document.querySelector(
     'input[name="authority"]:checked'
   );
   if (!authorityChecked) {
     alert("사용자 구분은 필수입력 항목입니다.");
     return;
-  }
+  } */
 
   const genderChecked = document.querySelector('input[name="gender"]:checked');
   if (!genderChecked) {
@@ -168,8 +180,53 @@ function register() {
   }
 
   // 필수 항목이 모두 입력되었으면 회원가입 로직 실행
-  alert("회원가입이 완료되었습니다.");
 }
+
+const inputGender = document.querySelector(
+  'input[name="gender"]:checked'
+).value;
+const inputGenre = document.querySelector('input[name="genre"]:cheked').value;
+
+document.querySelector("#userId").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupUserId = e.target.value;
+});
+document.querySelector("#userName").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupUserName = e.target.value;
+});
+document.querySelector("#password").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupPassword = e.target.value;
+});
+document.querySelector("#birthDate").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupBirthDate = e.target.value;
+});
+document.querySelector("#phoneNumber").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupPhoneNumber = e.target.value;
+});
+document.querySelector("#roadAddressDetail").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupAddress = e.target.value;
+});
+document.querySelector(inputGender).addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupGender = e.target.value;
+});
+document.querySelector("#email").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupEmail = e.target.value;
+});
+document.querySelector("#nickname").addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupNickname = e.target.value;
+});
+document.querySelector(inputGenre).addEventListener("change", (e) => {
+  console.log(e.target.value);
+  signupGenre = e.target.value;
+});
 
 function limitCheckboxSelection() {
   const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
@@ -210,3 +267,32 @@ document
   .addEventListener("input", function (event) {
     formatPhoneNumber(event.target);
   });
+
+document.querySelector(".el_btn--primary").addEventListener("click", () => {
+  if (confirm("회원가입 하시겠습니까?")) {
+    const data = {
+      userID: signupUserId,
+      userName: signupUserName,
+      password: signupPassword,
+      birthDate: signupBirthDate,
+      phoneNumber: signupPhoneNumber,
+      address: signupAddress,
+      gender: signupGender,
+      email: signupEmail,
+      nickname: signupNickname,
+      genre: signupGenre,
+    };
+    axios
+      .post(urlSignup, data, { withCredentials: true })
+      .then((response) => {
+        console.log("데이터 : ", response);
+        if (response.status == 201) {
+          alert("회원가입 완료");
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.log("에러 발생 : ", error);
+      });
+  }
+});
