@@ -22,6 +22,9 @@ public class Lecture {
     private String lectureName;
 
     @Column
+    private int price;
+
+    @Column
     private String category;
 
     @Column(name = "play_time")

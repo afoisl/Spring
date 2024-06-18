@@ -11,7 +11,6 @@
     <title>회원가입</title>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="/js/signup.js" defer></script> <!-- signup.js 파일 추가 -->
 </head>
 
 <body>
@@ -79,18 +78,18 @@
                         </div>
                         <div class="signupBox3">
                             <div class="signupBox3-1">핸드폰 번호</div>
-                            <input class="signupBox3-2" type="number" id="phoneNumber" required>
+                            <input class="signupBox3-2" type="text" id="phoneNumber" required>
                             <div class="signupBox3-3"></div>
                         </div>
                         <!-- 주소 항목 -->
                         <div class="bl_stack form">
                             <div class="el_ttl">주소</div>
                             <div class="bl_stack bl_stack--row">
-                                <input type="text" class="el_input hp_txt-center" placeholder="" disabled id="zonecode" />
+                                <input type="text" class="el_input hp_txt-center" placeholder="" disabled id="zonecode" required/>
                                 <button class="el_btn" id="find-addr-btn" onclick="findAddr()">우편번호 찾기</button>
                             </div>
-                            <input type="text" class="el_input" placeholder="" disabled id="roadAddress" />
-                            <input type="text" class="el_input" placeholder="상세주소를 입력해주세요." id="roadAddressDetail" />
+                            <input type="text" class="el_input" placeholder="" disabled id="roadAddress" required/>
+                            <input type="text" class="el_input" placeholder="상세주소를 입력해주세요." id="roadAddressDetail" required/>
                             <button class="el_btn" id="register-btn" onclick="registerAddr()">주소 등록하기</button>
                         </div>
                         <div class="signupBox3 address-margin">
@@ -124,6 +123,11 @@
     </div>
 </div>
 <script src="/js/signup.js"></script>
+<script>
+    document.getElementById('phoneNumber').addEventListener('input', function (event) {
+        formatPhoneNumber(event.target);
+    });
+</script>
 </body>
 
 </html>

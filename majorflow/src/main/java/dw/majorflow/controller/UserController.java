@@ -8,6 +8,7 @@ import dw.majorflow.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,6 +29,7 @@ public class UserController {
     private AuthenticationManager authenticationManager;
     private HttpServletRequest httpServletRequest;
 
+    @Autowired
     public UserController(UserService userService, UserDetailService userDetailService, AuthenticationManager authenticationManager, HttpServletRequest httpServletRequest) {
         this.userService = userService;
         this.userDetailService = userDetailService;
