@@ -1,3 +1,5 @@
+const urlSignup = "http://localhost:8080/user/signup";
+
 function findAddr() {
     new daum.Postcode({
         oncomplete: function (data) {
@@ -6,189 +8,178 @@ function findAddr() {
             var roadAddr = data.roadAddress;
             var jibunAddr = data.jibunAddress;
 
-            document.getElementById('zonecode').value = data.zonecode;
-            if (roadAddr !== '') {
+            document.getElementById("zonecode").value = data.zonecode;
+            if (roadAddr !== "") {
                 document.getElementById("roadAddress").value = roadAddr;
-            } else if (jibunAddr !== '') {
+            } else if (jibunAddr !== "") {
                 document.getElementById("roadAddress").value = jibunAddr;
             }
-        }
+        },
     }).open();
 }
 
 function registerAddr() {
-    var zonecode = document.getElementById('zonecode').value;
-    var roadAddress = document.getElementById('roadAddress').value;
-    var roadAddressDetail = document.getElementById('roadAddressDetail').value;
+    var zonecode = document.getElementById("zonecode").value;
+    var roadAddress = document.getElementById("roadAddress").value;
+    var roadAddressDetail = document.getElementById("roadAddressDetail").value;
 
     if (zonecode && roadAddress && roadAddressDetail) {
-        alert('주소가 등록되었습니다:\n' +
-            '우편번호: ' + zonecode + '\n' +
-            '도로명주소: ' + roadAddress + '\n' +
-            '상세주소: ' + roadAddressDetail);
+        alert(
+            "주소가 등록되었습니다:\n" +
+            "우편번호: " + zonecode + "\n" +
+            "도로명주소: " + roadAddress + "\n" +
+            "상세주소: " + roadAddressDetail
+        );
     } else {
-        alert('모든 주소 정보를 입력해 주세요.');
+        alert("모든 주소 정보를 입력해 주세요.");
     }
 }
 
-function isValidUserId(userId) {
-    const userIdRegex = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
-    return userIdRegex.test(userId);
-}
-
-function isValidNickname(nickname) {
-    return nickname.length >= 1 && nickname.length <= 10;
-}
-
 async function checkDuplicateId() {
-    const userId = document.getElementById('userId').value;
-    const duplicateResultElement = document.getElementById('duplicate-check-result');
-    const data = {userId:userId.value}
+    const userId = document.getElementById("userId").value;
+    const resultElement = document.getElementById("duplicate-check-result");
 
-    // 초기화
-    duplicateResultElement.innerText = '';
-
-    if (!isValidUserId(userId)) {
-        alert('사용자 ID는 4자에서 12자 사이의 영문+숫자로 이루어져야 하며 영문으로 시작되어야 합니다.');
+    // 입력값 유효성 검사
+    const idPattern = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
+    if (!idPattern.test(userId)) {
+        resultElement.innerText = "사용자 ID는 4~12자 사이의 영문+숫자로 이루어져야 하며 영문으로 시작되어야 합니다.";
+        resultElement.style.color = "red";
         return;
     }
 
     try {
-        console.log('Checking duplicate ID for:', userId); // 확인을 위해 로그 추가
-        const response = await axios.post('http://localhost:3000/check-id', { userId });
-        console.log('Response from server:', response.data); // 서버 응답 로그
-
+        console.log("Checking ID:", userId);
+        const response = await axios.post("http://localhost:8080/user/check-id", { userId });
+        console.log("Response received:", response);
         const exists = response.data.exists;
         if (exists) {
-            duplicateResultElement.innerText = '이미 사용 중인 아이디입니다.';
-            duplicateResultElement.style.color = 'red';
+            resultElement.innerText = "이미 사용 중인 아이디입니다.";
+            resultElement.style.color = "red";
         } else {
-            duplicateResultElement.innerText = '사용 가능한 아이디입니다.';
-            duplicateResultElement.style.color = 'green';
+            resultElement.innerText = "사용 가능한 아이디입니다.";
+            resultElement.style.color = "green";
         }
     } catch (error) {
-        console.error('Error checking ID:', error);
+        console.error("Error checking ID:", error);
     }
 }
 
 async function checkDuplicateNickname() {
-    const nickname = document.getElementById('nickname').value;
-    const resultElement = document.getElementById('nickname-duplicate-check-result');
+    const nickname = document.getElementById("nickname").value;
+    const resultElement = document.getElementById("nickname-duplicate-check-result");
 
-    // 초기화
-    resultElement.innerText = '';
-
-    if (!isValidNickname(nickname)) {
-        alert('닉네임은 1자에서 10자 이내여야 합니다.');
+    // 입력값 유효성 검사
+    const nicknamePattern = /^[a-zA-Z0-9가-힣]{1,10}$/;
+    if (!nicknamePattern.test(nickname)) {
+        resultElement.innerText = "닉네임은 1~10자 이내여야 합니다.";
+        resultElement.style.color = "red";
         return;
     }
 
     try {
-        console.log('Checking duplicate Nickname for:', nickname); // 확인을 위해 로그 추가
-        const response = await axios.post('http://localhost:3000/check-nickname', { nickname });
-        console.log('Response from server:', response.data); // 서버 응답 로그
-
+        console.log("Checking Nickname:", nickname);
+        const response = await axios.post("http://localhost:8080/user/check-nickname", { nickname });
+        console.log("Response received:", response);
         const exists = response.data.exists;
         if (exists) {
-            resultElement.innerText = '이미 사용 중인 닉네임입니다.';
-            resultElement.style.color = 'red';
+            resultElement.innerText = "이미 사용 중인 닉네임입니다.";
+            resultElement.style.color = "red";
         } else {
-            resultElement.innerText = '사용 가능한 닉네임입니다.';
-            resultElement.style.color = 'green';
+            resultElement.innerText = "사용 가능한 닉네임입니다.";
+            resultElement.style.color = "green";
         }
     } catch (error) {
-        console.error('Error checking Nickname:', error);
+        console.error("Error checking Nickname:", error);
     }
+}
+
+function register() {
+    // 필수 항목 체크
+    const requiredFields = [
+        { id: 'userId', message: '아이디는 필수입력 항목입니다.' },
+        { id: 'password', message: '비밀번호는 필수입력 항목입니다.' },
+        { id: 'confirmPassword', message: '비밀번호 확인은 필수입력 항목입니다.' },
+        { id: 'userName', message: '이름은 필수입력 항목입니다.' },
+        { id: 'nickname', message: '닉네임은 필수입력 항목입니다.' },
+        { id: 'email', message: '이메일은 필수입력 항목입니다.' },
+        { id: 'phoneNumber', message: '핸드폰 번호는 필수입력 항목입니다.' },
+        { id: 'zonecode', message: '주소는 필수입력 항목입니다.' },
+        { id: 'roadAddressDetail', message: '상세주소는 필수입력 항목입니다.' },
+        { id: 'birthDate', message: '생년월일은 필수입력 항목입니다.' }
+    ];
+
+    for (const field of requiredFields) {
+        const inputElement = document.getElementById(field.id);
+        if (!inputElement || !inputElement.value.trim()) {
+            alert(field.message);
+            inputElement.focus();
+            return;
+        }
+    }
+
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    // 비밀번호 길이 검사
+    if (password.length < 6 || password.length > 20) {
+        alert('비밀번호는 6~20자로 되어야 합니다.');
+        document.getElementById('password').focus();
+        return;
+    }
+
+    // 비밀번호와 비밀번호 확인 일치 여부 검사
+    if (password !== confirmPassword) {
+        alert('비밀번호와 비밀번호 확인 항목이 일치하지 않습니다.');
+        document.getElementById('confirmPassword').focus();
+        return;
+    }
+
+    const authorityChecked = document.querySelector('input[name="authority"]:checked');
+    if (!authorityChecked) {
+        alert('사용자 구분은 필수입력 항목입니다.');
+        return;
+    }
+
+    const genderChecked = document.querySelector('input[name="gender"]:checked');
+    if (!genderChecked) {
+        alert('성별은 필수입력 항목입니다.');
+        return;
+    }
+
+    // 필수 항목이 모두 입력되었으면 회원가입 로직 실행
+    alert('회원가입이 완료되었습니다.');
 }
 
 function limitCheckboxSelection() {
     const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
-    const genreErrorElement = document.getElementById('genre-error');
-
+    const errorElement = document.getElementById('genre-error');
     if (checkboxes.length > 3) {
-        genreErrorElement.innerText = '선호도(장르)는 최대 3개까지 선택 가능합니다.';
-        checkboxes[checkboxes.length - 1].checked = false; // 마지막 체크박스 선택 해제
+        checkboxes[checkboxes.length - 1].checked = false;
+        errorElement.innerText = "최대 3개의 장르만 선택할 수 있습니다.";
+        errorElement.style.color = "red";
     } else {
-        genreErrorElement.innerText = '';
+        errorElement.innerText = "";
     }
 }
 
-function isValidPassword(password) {
-    return password.length >= 6 && password.length <= 20;
+function formatPhoneNumber(input) {
+    const value = input.value.replace(/\D/g, '');
+    let formattedValue = '';
+
+    if (value.length < 4) {
+        formattedValue = value;
+    } else if (value.length < 7) {
+        formattedValue = `${value.slice(0, 3)}-${value.slice(3)}`;
+    } else if (value.length < 11) {
+        formattedValue = `${value.slice(0, 3)}-${value.slice(3, 6)}-${value.slice(6)}`;
+    } else {
+        formattedValue = `${value.slice(0, 3)}-${value.slice(3, 7)}-${value.slice(7)}`;
+    }
+
+    input.value = formattedValue;
 }
 
-function register() {
-    const userId = document.getElementById('userId').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    const userName = document.getElementById('userName').value;
-    const nickname = document.getElementById('nickname').value;
-    const authority = document.querySelector('input[name="authority"]:checked');
-    const email = document.getElementById('email').value;
-    const gender = document.querySelector('input[name="gender"]:checked');
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const birthDate = document.getElementById('birthDate').value;
-
-    if (!userId) {
-        alert('아이디는 필수 항목입니다. 아이디를 입력해 주세요.');
-        return;
-    }
-
-    if (!password) {
-        alert('비밀번호는 필수 항목입니다. 비밀번호를 입력해 주세요.');
-        return;
-    }
-
-    if (!confirmPassword) {
-        alert('비밀번호 확인은 필수 항목입니다. 비밀번호 확인을 입력해 주세요.');
-        return;
-    }
-
-    if (!userName) {
-        alert('이름은 필수 항목입니다. 이름을 입력해 주세요.');
-        return;
-    }
-
-    if (!nickname) {
-        alert('닉네임은 필수 항목입니다. 닉네임을 입력해 주세요.');
-        return;
-    }
-
-    if (!authority) {
-        alert('사용자 구분은 필수 항목입니다. 사용자 구분을 선택해 주세요.');
-        return;
-    }
-
-    if (!email) {
-        alert('이메일은 필수 항목입니다. 이메일을 입력해 주세요.');
-        return;
-    }
-
-    if (!gender) {
-        alert('성별은 필수 항목입니다. 성별을 선택해 주세요.');
-        return;
-    }
-
-    if (!phoneNumber) {
-        alert('핸드폰 번호는 필수 항목입니다. 핸드폰 번호를 입력해 주세요.');
-        return;
-    }
-
-    if (!birthDate) {
-        alert('생년월일은 필수 항목입니다. 생년월일을 입력해 주세요.');
-        return;
-    }
-
-    if (!isValidPassword(password)) {
-        alert('비밀번호는 6자에서 20자로 되어야 합니다.');
-        return;
-    }
-
-    if (password !== confirmPassword) {
-        alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
-        return;
-    }
-
-    // 여기서 서버에 회원가입 요청을 보내는 로직을 추가
-    // 예: axios.post('/signup', { userId, password, userName, nickname, authority: authority.value, email, gender: gender.value, phoneNumber, birthDate })
-}
+// 이벤트 리스너 추가
+document.getElementById('phoneNumber').addEventListener('input', function (event) {
+    formatPhoneNumber(event.target);
+});

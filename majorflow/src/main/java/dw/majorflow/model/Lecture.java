@@ -24,6 +24,9 @@ public class Lecture {
     @Column
     private int price;
 
+    @Column(name = "video_path")
+    private String videoPath;
+
     @Column
     private String category;
 
