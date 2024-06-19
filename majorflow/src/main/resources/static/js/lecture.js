@@ -21,12 +21,14 @@ function displayLecture(data) {
   const detailedBox2 = document.querySelector(".detailedBox2");
 
   const backBtn = document.createElement("div");
+  const backBtnImg = document.createElement("img");
   const detailedBox = document.createElement("div");
   const detailedBox2Img = document.createElement("div");
   const detailedBox2Text = document.createElement("div");
   const detailedBox2Text2 = document.createElement("div");
 
   backBtn.classList.add("backBtn");
+  backBtnImg.classList.add("backBtnImg");
   detailedBox.classList.add("detailedBox");
   detailedBox2.classList.add("detailedBox2");
   detailedBox2Img.classList.add("detailedBox2Img");
@@ -34,16 +36,18 @@ function displayLecture(data) {
   detailedBox2Text2.classList.add("detaildBox2Text2");
 
   //이미지 속성 추가 필요
+  backBtnImg.src = "/img/뒤로가기검정.png";
+  backBtnImg.alt = "뒤로가기";
   detailedBox.textContent = data.lectureName;
   detailedBox2Text.textContent = data.lectureText;
 
+  backBtn.appendChild(backBtnImg);
   allCourseDetailBox.appendChild(backBtn);
   allCourseDetailBox.appendChild(detailedBox);
   allCourseDetailBox.appendChild(detailedBox2);
   detailedBox2.appendChild(detailedBox2Img);
   detailedBox2.appendChild(detailedBox2Text);
   detailedBox2.appendChild(detailedBox2Text2);
-
   backBtn.addEventListener("click", () => {
     window.location.href = "course.html";
   });
@@ -54,12 +58,14 @@ function sessionCurrent() {
     .get("http://localhost:8080/user/current", { withCredentials: true })
     .then((response) => {
       console.log("데이터: ", response);
-      if (response.status == 200) {
+      if (response.status == 200 && response.data.userId !== "anonymousUser") {
         console.log("세션 유지");
         const userId = response.data.userId;
         document.querySelector(".menuLoginBtn").classList.add("hidden");
+        document.querySelector(".menuLogoutBtn").classList.remove("hidden");
       } else {
         document.querySelector(".menuLogoutBtn").classList.add("hidden");
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
       }
     })
     .catch((error) => {

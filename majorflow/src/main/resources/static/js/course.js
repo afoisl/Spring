@@ -23,6 +23,7 @@ function displayLectures(lectureData) {
 
       allCourseClick.appendChild(allCourseClickImg);
       const lectureName = document.createElement("p");
+      lectureName.classList.add("lectureName");
       lectureName.textContent = data.lectureName;
 
       allCourseClick.appendChild(lectureName);
@@ -34,6 +35,7 @@ function displayLectures(lectureData) {
     });
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const tasteCourseBtn = document.querySelector(".tasteCourseBtn");
   const allCourseBtn = document.querySelector(".allCourseBtn");
@@ -77,12 +79,14 @@ function sessionCurrent() {
     .get("http://localhost:8080/user/current", { withCredentials: true })
     .then((response) => {
       console.log("데이터: ", response);
-      if (response.status == 200) {
+      if (response.status == 200 && response.data.userId !== "anonymousUser") {
         console.log("세션 유지");
         const userId = response.data.userId;
         document.querySelector(".menuLoginBtn").classList.add("hidden");
+        document.querySelector(".menuLogoutBtn").classList.remove("hidden");
       } else {
         document.querySelector(".menuLogoutBtn").classList.add("hidden");
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
       }
     })
     .catch((error) => {
