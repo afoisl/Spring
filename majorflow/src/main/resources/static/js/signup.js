@@ -165,14 +165,6 @@ function register() {
     return;
   }
 
-  /* const authorityChecked = document.querySelector(
-    'input[name="authority"]:checked'
-  );
-  if (!authorityChecked) {
-    alert("사용자 구분은 필수입력 항목입니다.");
-    return;
-  } */
-
   const genderChecked = document.querySelector('input[name="gender"]:checked');
   if (!genderChecked) {
     alert("성별은 필수입력 항목입니다.");
@@ -180,12 +172,8 @@ function register() {
   }
 
   // 필수 항목이 모두 입력되었으면 회원가입 로직 실행
+  signupRegister();
 }
-
-const inputGender = document.querySelector(
-  'input[name="gender"]:checked'
-).value;
-const inputGenre = document.querySelector('input[name="genre"]:cheked').value;
 
 document.querySelector("#userId").addEventListener("change", (e) => {
   console.log(e.target.value);
@@ -211,10 +199,10 @@ document.querySelector("#roadAddressDetail").addEventListener("change", (e) => {
   console.log(e.target.value);
   signupAddress = e.target.value;
 });
-document.querySelector(inputGender).addEventListener("change", (e) => {
-  console.log(e.target.value);
-  signupGender = e.target.value;
-});
+// document.querySelector(inputGender).addEventListener("change", (e) => {
+//   console.log(e.target.value);
+//   signupGender = e.target.value;
+// });
 document.querySelector("#email").addEventListener("change", (e) => {
   console.log(e.target.value);
   signupEmail = e.target.value;
@@ -223,10 +211,10 @@ document.querySelector("#nickname").addEventListener("change", (e) => {
   console.log(e.target.value);
   signupNickname = e.target.value;
 });
-document.querySelector(inputGenre).addEventListener("change", (e) => {
-  console.log(e.target.value);
-  signupGenre = e.target.value;
-});
+// document.querySelector(inputGenre).addEventListener("change", (e) => {
+//   console.log(e.target.value);
+//   signupGenre = e.target.value;
+// });
 
 function limitCheckboxSelection() {
   const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
@@ -268,19 +256,19 @@ document
     formatPhoneNumber(event.target);
   });
 
-document.querySelector(".el_btn--primary").addEventListener("click", () => {
+function signupRegister() {
   if (confirm("회원가입 하시겠습니까?")) {
     const data = {
-      userID: signupUserId,
+      userId: signupUserId,
       userName: signupUserName,
       password: signupPassword,
       birthDate: signupBirthDate,
       phoneNumber: signupPhoneNumber,
       address: signupAddress,
-      gender: signupGender,
+      gender: getRadioBtn("gender"),
       email: signupEmail,
       nickname: signupNickname,
-      genre: signupGenre,
+      genre: getRadioBtn("genre"),
     };
     axios
       .post(urlSignup, data, { withCredentials: true })
@@ -288,11 +276,19 @@ document.querySelector(".el_btn--primary").addEventListener("click", () => {
         console.log("데이터 : ", response);
         if (response.status == 201) {
           alert("회원가입 완료");
-          window.location.reload();
+          window.location.href = "login.html";
         }
       })
       .catch((error) => {
         console.log("에러 발생 : ", error);
       });
   }
-});
+}
+
+function getRadioBtn(name) {
+  const elements = document.getElementsByName(name);
+  const arrayElements = [...elements];
+  console.log(arrayElements);
+  let values = arrayElements.filter((e) => e.checked).map((e) => e.value);
+  return values;
+}

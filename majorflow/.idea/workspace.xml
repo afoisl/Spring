@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00c212e5-8e08-4b0b-b5cb-e81ac98b4f3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/EduTech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/EduTech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReviewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReviewDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReviewDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/sessionDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReplyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReplyRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReviewRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +45,24 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2i4hV19KYlb2yolstMwav3vxBEo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.MajorFlowApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.MajorFlowApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="MajorFlowApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dw.majorflow.MajorFlowApplication" />
@@ -75,5 +100,8 @@
       <updated>1718755776546</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
