@@ -25,10 +25,11 @@ document.querySelector(".sign-inBx").addEventListener("click", () => {
       console.log("데이터: ", response);
       sessionCurrent();
       alert("로그인이 완료되었습니다");
-      window.location.href = "about.html";
+      window.location.href = "index.html";
     })
     .catch((error) => {
       console.log("에러 발생: ", error);
+      alert("아이디 또는 비밀번호가 올바르지 않습니다");
     });
 });
 
@@ -48,6 +49,7 @@ function sessionCurrent() {
 
 sessionCurrent();
 
+// 비밀번호 재설정 모달 관련 코드
 document
   .getElementById("forgotPasswordLink")
   .addEventListener("click", function (e) {
