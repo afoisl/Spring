@@ -20,6 +20,7 @@ public class TeacherService {
         Optional<Teacher> teacher = teacherRepository.findById(id);
         if (teacher.isPresent()) {
             return toDto(teacher.get());
+
         } else {
             throw new RuntimeException("Teacher not found with id: " + id);
         }

@@ -13,7 +13,6 @@ document.querySelector("#password").addEventListener("change", (e) => {
 });
 
 document.querySelector(".sign-inBx").addEventListener("click", () => {
-  //event.preventDefault();
   const data = {
     userId: userId,
     password: password,
@@ -29,7 +28,7 @@ document.querySelector(".sign-inBx").addEventListener("click", () => {
     })
     .catch((error) => {
       console.log("에러 발생: ", error);
-      alert("아이디 또는 비밀번호가 올바르지 않습니다");
+      alert("아이디또는 비밀번호가 올바르지 않습니다");
     });
 });
 
@@ -38,7 +37,7 @@ function sessionCurrent() {
     .get("http://localhost:8080/user/current", { withCredentials: true })
     .then((response) => {
       console.log("데이터:", response);
-      if (response.status == 200) {
+      if (response.status == 200 && response.data.userId !== "anonymousUser") {
         console.log("세션 유지");
       }
     })
