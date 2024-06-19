@@ -1,5 +1,6 @@
 package dw.majorflow.controller;
 
+import dw.majorflow.dto.TeacherDto;
 import dw.majorflow.model.Teacher;
 import dw.majorflow.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/teacher")
 public class TeacherController {
     @Autowired
     TeacherService teacherService;
 
-    @GetMapping("/teacher/{id}")
-    public ResponseEntity<Teacher> getTeacherById(@PathVariable long id) {
-        return new ResponseEntity<>(teacherService.getTeacherById(id),
-                HttpStatus.OK);
+    @GetMapping("/get/{id}")
+    public TeacherDto getTeacherById(@PathVariable Long id) {
+        return teacherService.getTeacherById(id);
     }
 }

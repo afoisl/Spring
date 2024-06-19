@@ -1,5 +1,6 @@
 package dw.majorflow.service;
 
+import dw.majorflow.dto.TeacherDto;
 import dw.majorflow.exception.ResourceNotFoundException;
 import dw.majorflow.model.Teacher;
 import dw.majorflow.repository.TeacherRepository;
@@ -15,13 +16,19 @@ public class TeacherService {
     @Autowired
     TeacherRepository teacherRepository;
 
-    public Teacher getTeacherById(long id) {
-        Optional<Teacher> teacherOptional = teacherRepository.findById(id);
-        if(teacherOptional.isPresent()) {
-            return teacherOptional.get();
-        }else {
-            throw new ResourceNotFoundException("Teacher", "ID", id);
+    public TeacherDto getTeacherById(Long id) {
+        Optional<Teacher> teacher = teacherRepository.findById(id);
+        if (teacher.isPresent()) {
+            return toDto(teacher.get());
+        } else {
+            throw new RuntimeException("Teacher not found with id: " + id);
         }
+    }
 
+    private TeacherDto toDto(Teacher teacher) {
+        TeacherDto dto = new TeacherDto();
+        dto.setTeacherId(teacher.getTeacherId());
+        dto.setTeacherName(teacher.getTeacherName());
+        return dto;
     }
 }
