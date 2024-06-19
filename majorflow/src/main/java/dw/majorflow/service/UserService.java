@@ -51,10 +51,10 @@ public class UserService {
                     userDto.getBirthDate(),
                     userDto.getPhoneNumber(),
                     userDto.getAddress(),
-                    userDto.getGender(),
+                    userDto.getGender().getFirst(),
                     userDto.getEmail(),
                     userDto.getNickname(),
-                    userDto.getGenre(),
+                    userDto.getGenre().getFirst(),
                     authority);
             return userRepository.save(user).getUserId();
         }
