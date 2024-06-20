@@ -20,6 +20,17 @@ function removeActiveClasses() {
   });
 }
 
+document.querySelectorAll(".subMenu > div").forEach((div) => {
+  div.addEventListener("click", () => {
+    document
+      .querySelectorAll(".subMenu > div")
+      .forEach((item) => item.classList.remove("active"));
+
+    // 클릭된 div에 active 클래스 추가
+    div.classList.add("active");
+  });
+});
+
 document.querySelector(".noticeBox6").addEventListener("click", () => {
   document.querySelector(".noticeWriteBox").classList.remove("hidden");
   document.querySelector(".noticeBox").classList.add("hidden");
@@ -53,12 +64,14 @@ function sessionCurrent() {
     .get("http://localhost:8080/user/current", { withCredentials: true })
     .then((response) => {
       console.log("데이터: ", response);
-      if (response.status == 200) {
+      if (response.status == 200 && response.data.userId !== "anonymousUser") {
         console.log("세션 유지");
         const userId = response.data.userId;
         document.querySelector(".menuLoginBtn").classList.add("hidden");
+        document.querySelector(".menuLogoutBtn").classList.remove("hidden");
       } else {
         document.querySelector(".menuLogoutBtn").classList.add("hidden");
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
       }
     })
     .catch((error) => {

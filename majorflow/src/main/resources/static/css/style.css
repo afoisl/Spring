@@ -36,7 +36,7 @@
   letter-spacing: 40px;
   margin: 30px;
   left: 380px;
-  bottom: 20px;
+  bottom: -20px;
 }
 .mainTitle2 {
   width: 100%;
@@ -46,7 +46,7 @@
   letter-spacing: 40px;
   margin: 30px;
   left: 1050px;
-  top: 80px;
+  top: 130px;
 }
 
 .circleRing {
@@ -99,6 +99,51 @@
   100% {
     transform: rotate(0deg);
   }
+}
+
+.loginMenuBtn {
+  height: 300px;
+  width: 150px;
+  color: white;
+  font-size: 35px;
+  line-height: 40px;
+  bottom: 539px;
+  left: 100px;
+  cursor: pointer; /* Pointer cursor for button */
+}
+
+.loginMenu {
+  height: 1000px;
+  width: 500px;
+  color: black;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  bottom: -81px;
+  left: 0px;
+  transform: translateX(-100%);
+  opacity: 0;
+  padding: 10px;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.loginMenu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.loginMenu::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: white;
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .menuBtn {
@@ -187,11 +232,11 @@
 .loginBtn {
   color: white;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 5px;
   line-height: 30px;
   bottom: 360px;
-  left: 900px;
+  left: 910px;
 }
 
 .loginBtn:hover {
@@ -230,7 +275,7 @@ body {
 /* 상단 메뉴바 설정*/
 .mainMenu {
   display: grid;
-  grid-template-columns: 2fr 5fr 3fr;
+  grid-template-columns: 1.5fr 5.5fr 3fr;
   justify-content: center;
   align-items: center;
   height: 50px;
@@ -248,6 +293,14 @@ body {
 .rightMenu {
   padding: 10px;
   cursor: pointer;
+}
+
+.menuReviewBtn {
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  padding: 5px 20px 5px 20px;
 }
 
 .mainMenu > div > span:hover {
@@ -272,11 +325,31 @@ body {
 }
 
 .subMenu > div {
-  padding: 40px 20px 40px 0px;
+  width: 250px;
+  height: 50px;
+  margin: 20px 20px 20px 0px;
+  padding: 20px 20px 20px 0px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 30px 30px 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .subMenu > div:hover {
-  color: gray;
+  background-color: white;
+  color: black;
+}
+
+.subMenu > div.active {
+  background-image: linear-gradient(
+    to right,
+    #d63ef4,
+    #619ede
+  ); /* 그라디언트 지정 */
+  color: white;
 }
 
 .logo {
@@ -435,26 +508,61 @@ body {
   font-weight: bold;
 }
 
+.lectureName {
+  font-size: 25px;
+  margin: 0 0 0 30px;
+}
+
 .allCourse {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* 2열 그리드 */
+  grid-template-rows: auto auto; /* 2행 그리드 */
   gap: 20px;
 }
 .allCourseClick {
   margin: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  position: relative; /* 텍스트 위치를 위해 relative 설정 */
 }
 
 .allCourseClickImg {
-  background-color: gray;
-  width: 300px;
+  width: 500px;
   height: 300px;
+  border-radius: 15px; /* 모서리를 둥글게 */
+  border: 2px solid #ddd; /* 테두리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  transition: transform 0.2s; /* 호버 시 애니메이션 */
+}
+
+.allCourseClickImg:hover {
+  transform: scale(1.05); /* 호버 시 확대 */
+}
+
+.courseText {
+  position: absolute;
+  bottom: 10px; /* 이미지 아래에서 10px 위치 */
+  left: 50%;
+  transform: translateX(-50%); /* 가운데 정렬 */
+  color: white; /* 텍스트 색상 흰색 */
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  padding: 5px 10px;
+  border-radius: 10px; /* 둥근 모서리 */
 }
 
 .backBtn {
-  background-color: gray;
   width: 50px;
   height: 50px;
   margin: 30px 0px 10px 0px;
+}
+
+.backBtnImg {
+  width: inherit;
 }
 
 .detailedBox2 {
@@ -763,10 +871,6 @@ body {
   padding: 5px 0px 5px 0px;
   margin: 0px 0px 30px 0px;
 }
-
-/* .enrollPrice {
-  padding: 30px 20px 20px 0px;
-} */
 
 .enrollPrice > div {
   display: inline-block;
@@ -1334,20 +1438,14 @@ body {
 
 .loginBody {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #111;
+  background: #0e0e0e;
   width: 100%;
   overflow: hidden;
 }
 
-.loginBody > .login {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-}
 .ring {
   position: relative;
   width: 600px;
@@ -1472,6 +1570,82 @@ body {
 .login .sign-inBx input:hover {
   background: rgb(51, 51, 51);
 }
+/* 비밀번호 재설정 팝업창 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  background-color: #111;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reset-passwordBx {
+  position: relative;
+  width: 100%;
+}
+
+.reset-passwordBx input {
+  position: relative;
+  width: 100%;
+  padding: 20px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.5em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+  margin-top: 20px;
+}
+
+.reset-passwordBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.reset-passwordBx input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  background: rgb(94, 94, 94);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: 0.3s;
+  margin: 20px auto;
+  display: block;
+}
+
+.reset-passwordBx input[type="submit"]:hover {
+  background: rgb(51, 51, 51);
+}
 
 /*장바구니 */
 .box1Cart {
@@ -1570,6 +1744,116 @@ body {
   text-align: center;
   line-height: 64px;
   border-radius: 50px;
+}
+
+/* 나의 진도율 페이지 설정 */
+
+.progressTitle {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+}
+
+.selectSearchBox {
+  display: flex;
+  justify-content: center;
+}
+
+.selectSubjectBtn {
+  height: 50px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 45px;
+  font-size: 20px;
+  padding: 0px 10px;
+  margin: 30px 10px;
+  color: gray;
+}
+
+.searchSubjectBtn {
+  height: 50px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 45px;
+  font-size: 20px;
+  padding: 0px 10px;
+  margin: 30px 10px;
+  color: gray;
+}
+
+.searchIcon {
+  height: 50px;
+  width: 50px;
+  margin: 30px 0px;
+  background-color: gray;
+}
+
+.progressTitleBox {
+  display: flex;
+  justify-content: left;
+}
+
+.progressSubjectName {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+.progressSubjectInfo {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  margin: 30px;
+}
+
+.progressInfoBox {
+  height: 700px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.progressInfo {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.progressInfoStudent {
+  font-size: 30px;
+  padding: 0px 10px;
+  margin: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+.progressInfoGraph {
+  height: 50px;
+  width: 700px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 40px;
+  position: relative;
+}
+
+.progressInfoGraphColor {
+  height: 50px;
+  width: 0%;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #000;
 }
 
 .hidden {

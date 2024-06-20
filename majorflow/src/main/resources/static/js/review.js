@@ -15,17 +15,25 @@ document.querySelector(".reviewBtn").addEventListener("click", () => {
   document.querySelector(".reivewWriteBox").classList.add("hidden");
 });
 
+function displayReview(reviewData) {
+  console.log(reviewData.length);
+  if (reviewData.length > 0) {
+  }
+}
+
 function sessionCurrent() {
   axios
     .get("http://localhost:8080/user/current", { withCredentials: true })
     .then((response) => {
       console.log("데이터: ", response);
-      if (response.status == 200) {
+      if (response.status == 200 && response.data.userId !== "anonymousUser") {
         console.log("세션 유지");
         const userId = response.data.userId;
         document.querySelector(".menuLoginBtn").classList.add("hidden");
+        document.querySelector(".menuLogoutBtn").classList.remove("hidden");
       } else {
         document.querySelector(".menuLogoutBtn").classList.add("hidden");
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
       }
     })
     .catch((error) => {
