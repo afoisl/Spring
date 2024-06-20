@@ -272,3 +272,13 @@ body {
   inherits: true;
   initial-value: 0turn;
 }
+
+/* 뒤로가기 버튼 스타일 */
+.back-button {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 20px;
+  display: inline-block;
+}
