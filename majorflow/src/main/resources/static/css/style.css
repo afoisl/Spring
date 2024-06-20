@@ -1605,15 +1605,10 @@ body {
   justify-content: space-between;
   color: #fff;
 }
-.login .links .find-password {
-  color: #fff;
-  text-decoration: underline;
-  font-size: 14px;
-  padding: 5px 10px 0px 10px;
-}
 
 .login .links .signup-link {
-  padding: 0 20px;
+  padding: 0 15px;
+  text-decoration: underline;
 }
 
 .login .sign-inBx input[type="submit"] {
@@ -1642,82 +1637,6 @@ body {
   outline: none;
 }
 .login .sign-inBx input:hover {
-  background: rgb(51, 51, 51);
-}
-/* 비밀번호 재설정 팝업창 스타일 */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.modal-content {
-  background-color: #111;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 10px;
-  color: #fff;
-}
-
-.close-btn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.reset-passwordBx {
-  position: relative;
-  width: 100%;
-}
-
-.reset-passwordBx input {
-  position: relative;
-  width: 100%;
-  padding: 20px 30px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 40px;
-  font-size: 1.5em;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
-  margin-top: 20px;
-}
-
-.reset-passwordBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.reset-passwordBx input[type="submit"] {
-  width: 50%;
-  padding: 10px;
-  background: rgb(94, 94, 94);
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
-  transition: 0.3s;
-  margin: 20px auto;
-  display: block;
-}
-
-.reset-passwordBx input[type="submit"]:hover {
   background: rgb(51, 51, 51);
 }
 

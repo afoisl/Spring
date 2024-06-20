@@ -48,53 +48,6 @@ function sessionCurrent() {
 
 sessionCurrent();
 
-// 비밀번호 재설정 모달 관련 코드
-document
-  .getElementById("forgotPasswordLink")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    document.getElementById("passwordResetModal").style.display = "block";
-  });
-
-document.querySelector(".close-btn").addEventListener("click", function () {
-  document.getElementById("passwordResetModal").style.display = "none";
-});
-
-window.addEventListener("click", function (event) {
-  if (event.target == document.getElementById("passwordResetModal")) {
-    document.getElementById("passwordResetModal").style.display = "none";
-  }
-});
-
-document
-  .getElementById("resetPasswordBtn")
-  .addEventListener("click", function () {
-    const resetUserId = document.getElementById("resetUserId").value;
-    const newPassword = document.getElementById("newPassword").value;
-    const confirmNewPassword =
-      document.getElementById("confirmNewPassword").value;
-
-    if (newPassword !== confirmNewPassword) {
-      alert("비밀번호가 일치하지 않습니다.");
-      return;
-    }
-
-    const resetData = {
-      userId: resetUserId,
-      newPassword: newPassword,
-    };
-
-    axios
-      .post("http://localhost:8080/user/reset-password", resetData)
-      .then((response) => {
-        alert("비밀번호가 재설정되었습니다.");
-        document.getElementById("passwordResetModal").style.display = "none";
-      })
-      .catch((error) => {
-        console.log("에러 발생: ", error);
-      });
-  });
-
 document.addEventListener("DOMContentLoaded", function () {
   var menuBtn = document.querySelector(".loginMenuBtn");
   var menu = document.querySelector(".loginMenu");
