@@ -12,6 +12,5 @@ import lombok.Setter;
 @Setter
 public class TeacherDto {
     private Long teacherId;
-    private User user;
     private String teacherName;
 }
