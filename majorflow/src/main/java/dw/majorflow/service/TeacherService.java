@@ -19,6 +19,7 @@ public class TeacherService {
     @Autowired
     TeacherRepository teacherRepository;
 
+    // 강사Id를 받아와서 강사Id와 강사이름을 출력하는 코드
     public TeacherDto getTeacherById(Long id) {
         Optional<Teacher> teacher = teacherRepository.findById(id);
         if (teacher.isPresent()) {
@@ -29,6 +30,7 @@ public class TeacherService {
         }
     }
 
+    // 강사엔티티에서 불필요한 정보는 제외하고 강사Id와 강사이름만 DTO 에 담는 코드
     private TeacherDto toDto(Teacher teacher) {
         TeacherDto dto = new TeacherDto();
         dto.setTeacherId(teacher.getTeacherId());

@@ -21,6 +21,7 @@ public class StatisticsController {
     @Autowired
     private UserActivityService userActivityService;
 
+    // 방문자 수, 사용자 수, 리뷰 수를 Count 해서 통계내는 코드
     @GetMapping
     public ResponseEntity<Map<String, Long>> getStatistics() {
         long userCount = statisticsService.getUSerCount();

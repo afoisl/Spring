@@ -18,6 +18,7 @@ public class TeacherController {
     @Autowired
     TeacherService teacherService;
 
+
     @GetMapping("/get/{id}")
     public TeacherDto getTeacherById(@PathVariable Long id) {
         return teacherService.getTeacherById(id);
