@@ -69,6 +69,7 @@ public class UserController {
         return "You have been logged out.";
     }
 
+
     @GetMapping("/current")
     public SessionDto getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

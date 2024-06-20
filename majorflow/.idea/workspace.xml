@@ -5,7 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57bff0e-adb0-40e5-9453-a32a4cab24be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/UserDetailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/enrollment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/enrollment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/review.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
