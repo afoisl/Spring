@@ -16,9 +16,11 @@ function displayLectures(lectureData) {
   if (lectureData.length > 0) {
     const allCourse = document.querySelector(".allCourse");
     allCourse.innerHTML = ""; // 기존 강좌 초기화
+
     lectureData.forEach((data) => {
       const allCourseClick = document.createElement("div");
       allCourseClick.classList.add("allCourseClick");
+
       // 이미지 태그 추가
       const imgElement = document.createElement("img");
       imgElement.src = "/img/전체강좌_기타.jpg";
@@ -47,6 +49,7 @@ function displayLectures(lectureData) {
           .then((response) => {
             console.log("데이터: ", response.data);
             displayLecture(response.data);
+
             if (response.status == 200) {
               document
                 .querySelector(".allCourseDetailBox")
@@ -62,6 +65,7 @@ function displayLectures(lectureData) {
     });
   }
 }
+
 function displayLecture(data) {
   const allCourseDetailBox = document.querySelector(".allCourseDetailBox");
 
@@ -73,6 +77,7 @@ function displayLecture(data) {
   const detailedBox2Img = document.createElement("div");
   const detailedBox2Text = document.createElement("div");
   const detailedBox2Text2 = document.createElement("div");
+
   backBtn.classList.add("backBtn");
   detailedBox.classList.add("detailedBox");
   detailedBox2.classList.add("detailedBox2");
@@ -134,17 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("coursePriceGuideBtn not found");
   }
-});
-
-document.querySelectorAll(".subMenu > div").forEach((div) => {
-  div.addEventListener("click", () => {
-    document
-      .querySelectorAll(".subMenu > div")
-      .forEach((item) => item.classList.remove("active"));
-
-    // 클릭된 div에 active 클래스 추가
-    div.classList.add("active");
-  });
 });
 
 function sessionCurrent() {
