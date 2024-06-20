@@ -77,7 +77,7 @@ public class UserController {
         }
         SessionDto sessionDto = new SessionDto();
         sessionDto.setUserId(authentication.getName());
-        sessionDto.setUserName(authentication.getName());
+        sessionDto.setNickname(authentication.getName());
         sessionDto.setAuthority(authentication.getAuthorities());
         return sessionDto;
     }

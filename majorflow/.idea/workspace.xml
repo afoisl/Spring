@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57bff0e-adb0-40e5-9453-a32a4cab24be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/TeacherService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
