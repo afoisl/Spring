@@ -249,6 +249,11 @@ function formatPhoneNumber(input) {
   input.value = formattedValue;
 }
 
+// 뒤로 가기 함수
+function goBack() {
+  window.location.href = "login.html"; // 로그인 페이지로 이동
+}
+
 // 이벤트 리스너 추가
 document
   .getElementById("phoneNumber")
