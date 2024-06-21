@@ -16,4 +16,6 @@ public class SessionDto {
     private String userId;
     private String nickname;
     private Collection<? extends GrantedAuthority> authority;
+
+
 }
