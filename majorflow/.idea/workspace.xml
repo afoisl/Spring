@@ -5,48 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57bff0e-adb0-40e5-9453-a32a4cab24be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/AuthorityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/dto/SessionDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/MajorFlowApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/LectureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReplyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReviewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ReviewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/controller/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReviewDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/dto/ReviewDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAccessDeniedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAccessDeniedHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/MyAuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/exception/ResourceNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Authority.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Authority.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/EduTech.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/FreeBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/FreeBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Reply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/CartRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/LectureRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReplyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReplyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/ReviewRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/CartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/LectureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReplyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/ReviewService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/service/UserDetailService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
