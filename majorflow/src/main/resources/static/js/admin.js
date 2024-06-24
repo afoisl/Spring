@@ -53,29 +53,6 @@ function displayAdmin(data) {
     adminUserGenre.classList.add("adminUserGenre");
     adminUserGenre.textContent = userData.genre;
 
-    const adminUserAuthority = document.createElement("td");
-    adminUserAuthority.classList.add("adminUserAuthority");
-
-    // 권한 설정
-
-    const selectElement = document.createElement("select");
-    selectElement.name = `authority-${userData.userId}`;
-
-    const studentOption = document.createElement("option");
-    studentOption.value = "ROLE_USER";
-    studentOption.textContent = "학생";
-    studentOption.selected = userData.authority === "ROLE_USER";
-
-    const teacherOption = document.createElement("option");
-    teacherOption.value = "ROLE_TEACHER";
-    teacherOption.textContent = "선생님";
-    teacherOption.selected = userData.authority === "ROLE_TEACHER";
-
-    selectElement.appendChild(studentOption);
-    selectElement.appendChild(teacherOption);
-
-    adminUserAuthority.appendChild(selectElement);
-
     tr.appendChild(adminUserId);
     tr.appendChild(adminUserName);
     tr.appendChild(adminUserNickname);
@@ -85,7 +62,6 @@ function displayAdmin(data) {
     tr.appendChild(adminUserEmail);
     tr.appendChild(adminUserPhoneNum);
     tr.appendChild(adminUserGenre);
-    tr.appendChild(adminUserAuthority);
     tbody.appendChild(tr);
   });
 }
