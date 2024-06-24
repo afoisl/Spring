@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9bfa8bf1-6ef1-4be4-a2a1-385f56e778d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/admin.css" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
