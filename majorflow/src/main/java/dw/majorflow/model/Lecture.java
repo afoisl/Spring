@@ -21,9 +21,6 @@ public class Lecture {
     @Column(name = "lecture_name")
     private String lectureName;
 
-    @Column
-    private int price;
-
     @Column(name = "lecture_image")
     private String lectureImage;
 
@@ -32,9 +29,6 @@ public class Lecture {
 
     @Column
     private String category;
-
-    @Column(name = "play_time")
-    private int playTime;
 
     @Column(name = "lecture_text", length = 65535)
     private String lectureText;
