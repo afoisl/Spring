@@ -68,7 +68,6 @@
                   <th>이메일</th>
                   <th>휴대폰번호</th>
                   <th>장르</th>
-                  <th>권한부여</th>
                 </tr>
               </thead>
               <tbody class="tbody">
@@ -95,36 +94,41 @@
           <div class="adminUserSaveBtn">저장하기</div>
         </div>
         <div class="courseUserSubTitle">강의별유저보기(이름못정함)</div>
-        <div class="celloLectureUser">
-          <div class="courseUserGrid">
-            <div class="lectureUserTitle">첼로</div>
-            <div class="courseUserArrow">∨</div>
-          </div>
-          <!--                아코디언 효과랑 공지사항은 주말에 할께용...ㅠ0ㅠ-->
-          <div class="lectureUserList celloLectureUserName">첼로강의 듣는 유저이름뜨게 구현하기!</div>
-        </div>
-        <div class="pianoLectureUser">
-          <div class="courseUserGrid">
-            <div class="lectureUserTitle">피아노</div>
-            <div class="courseUserArrow">∨</div>
-          </div>
-          <div class="lectureUserList pianoLectureUserName">피아노강의 듣는 유저이름뜨게 구현하기!</div>
-        </div>
-        <div class="guitarLectureUser">
-          <div class="courseUserGrid">
-            <div class="lectureUserTitle">기타</div>
-            <div class="courseUserArrow">∨</div>
-          </div>
-          <div class="lectureUserList guitarLectureUserName">기타강의 듣는 유저이름뜨게 구현하기!</div>
-        </div>
-        <div class="drumLectureUser">
-          <div class="courseUserGrid">
-            <div class="lectureUserTitle">드럼</div>
-            <div class="courseUserArrow">∨</div>
-          </div>
-          <div class="lectureUserList drumLectureUserName">드럼강의 듣는 유저이름뜨게 구현하기!</div>
-        </div>
+        <div class="lectureCourseUserGrid">
+          <div class="celloLectureUser">
+            <div class="courseUserGrid">
+              <div class="lectureUserTitle">첼로</div>
 
+            </div>
+            <div class="lectureUserTitleDown">
+              <p class="celloLectureUserName">첼로강의 듣는 유저이름뜨게 구현하기!</p>
+            </div>
+          </div>
+          <div class="pianoLectureUser">
+            <div class="courseUserGrid">
+              <div class="lectureUserTitle">피아노</div>
+            </div>
+            <div class="lectureUserTitleDown">
+              <p class="pianoLectureUserName">피아노강의 듣는 유저이름뜨게 구현하기!</p>
+            </div>
+          </div>
+          <div class="guitarLectureUser">
+            <div class="courseUserGrid">
+              <div class="lectureUserTitle">기타</div>
+            </div>
+            <div class="lectureUserTitleDown">
+              <p class="guitarLectureUserName">기타강의 듣는 유저이름뜨게 구현하기!</p>
+            </div>
+          </div>
+          <div class="drumLectureUser">
+            <div class="courseUserGrid">
+              <div class="lectureUserTitle">드럼</div>
+            </div>
+            <div class="lectureUserTitleDown">
+              <p class="drumLectureUserName">드럼강의 듣는 유저이름뜨게 구현하기!</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="courseModal" class="userCourseModal">
         <div class="courseModal-content">
@@ -145,6 +149,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- 공지사항 등록 -->
+      <div class="wbox noticeWriteBox hidden">
+        <div class="noticeBox1">공지사항 등록</div>
+        <div class="noticeWriteBox1">제목</div>
+        <div class="noticeWriteBox2">내용</div>
+        <div class="noticeWriteBox3">글쓰기</div>
       </div>
     </div>
     <div class="footer">

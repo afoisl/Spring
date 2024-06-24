@@ -619,33 +619,77 @@ body {
 .tasteCourseClick {
   margin: 20px 0 20px 0;
 }
-.tasteCourseClickAvi {
-  background-color: gray;
-  width: 500px;
-  height: 300px;
+
+.tasteCourseClickImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 450px; /* 박스의 가로 길이 조정 */
+  height: 300px; /* 박스의 세로 길이 조정 */
+}
+
+.tasteCourseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 .coursePriceGuide {
-  width: 100%;
+  width: 90%;
   height: 800px;
-  border: 1px solid black;
+  border-radius: 15px; /* 둥근 모서리 */
+  background: linear-gradient(
+    to bottom,
+    #f0f4f8,
+    #d9e2ec
+  ); /* 배경 그라데이션 */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  transition: box-shadow 0.3s ease; /* 애니메이션 효과 */
 }
+
+.coursePriceGuide::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: inherit; /* 둥근 모서리 유지 */
+  background: linear-gradient(
+    to right,
+    #6a11cb,
+    #2575fc
+  ); /* 테두리 그라데이션 */
+}
+
+.coursePriceGuide:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 강화 */
+}
+
 .horizontal-line {
   width: 90%;
   height: 2px;
-  background-color: #000;
-  margin: 40px 800px 5px 80px;
+  background-color: #a0aec0;
+  margin: 40px auto;
 }
-#priceGuide1 {
-  font-size: 70px;
-  margin: 20px 0 10px 100px;
-}
+#priceGuide1,
 #priceGuide2 {
   font-size: 70px;
   margin: 20px 0 10px 100px;
+  color: #333;
 }
 .priceGuide3 {
   font-size: 40px;
   margin: 20px 0 0px 100px;
+  color: #555;
 }
 .priceGuide4 {
   font-size: 90px;
@@ -653,12 +697,14 @@ body {
   font-weight: bold;
   display: flex;
   justify-content: end;
+  color: #111;
 }
 #priceGuide5 {
   font-size: 25px;
   margin: 40px 80px 10px 0px;
   display: flex;
   justify-content: end;
+  color: #777;
 }
 
 /* 동영상 모달창 */
@@ -1745,6 +1791,15 @@ body {
   border-bottom: 2px solid black;
 }
 
+.noInfo {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding: 50px;
+  margin: 50px;
+}
+
 .selectSearchBox {
   display: flex;
   justify-content: center;
@@ -1789,56 +1844,59 @@ body {
 }
 
 .progressSubjectName {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   display: flex;
   justify-content: left;
-  padding: 30px 0px;
+  padding: 0px;
   margin: 30px;
 }
 
 .progressSubjectInfo {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  padding: 30px 0px;
-  margin: 30px;
+  padding: 0px;
+  margin: 10px;
 }
 
 .progressInfoBox {
-  height: 700px;
-  border: 2px solid black;
-  border-radius: 5px;
+  height: 350px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 10px;
   padding: 20px;
+  margin: 50px 20px 20px 20px;
 }
 
 .progressInfo {
+  height: 70px;
   display: grid;
   grid-template-columns: 35% 65%;
 }
 
 .progressInfoStudent {
-  font-size: 30px;
-  padding: 0px 10px;
-  margin: 40px;
+  font-size: 20px;
+  padding: 0px;
+  margin: 30px;
   color: black;
   font-weight: bold;
 }
 
 .progressInfoGraph {
-  height: 50px;
-  width: 700px;
-  border: 2px solid black;
+  height: 30px;
+  width: 500px;
+  border: 0.5px solid gray;
   border-radius: 10px;
   margin: 40px;
   position: relative;
 }
 
 .progressInfoGraphColor {
-  height: 50px;
+  height: 28px;
   width: 0%;
-  border: 2px solid black;
+  border: 0.5px solid gray;
   border-radius: 10px;
   background-color: #000;
 }

@@ -4,45 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9bfa8bf1-6ef1-4be4-a2a1-385f56e778d1" name="Changes" comment="">
+    <list default="true" id="aa52f8d0-2a81-420a-8760-0d0ee6a1eebf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/FreeBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Lecture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dw/majorflow/model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dw/majorflow/model/Lecture.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/enrollment.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/enrollment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/course.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/course.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2iJTbKXyuLTta9mq9gGYrkLxSsJ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MajorFlowApplication.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="RunManager">
@@ -65,22 +60,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="9bfa8bf1-6ef1-4be4-a2a1-385f56e778d1" name="Changes" comment="" />
-      <created>1719207752157</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1719207752157</updated>
-    </task>
     <servers />
   </component>
 </project>

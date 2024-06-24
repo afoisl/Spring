@@ -11,96 +11,51 @@ axios
     console.log("에러발생: ", error);
   });
 
+document.querySelectorAll(".subMenu > div").forEach((div) => {
+  div.addEventListener("click", () => {
+    document
+      .querySelectorAll(".subMenu > div")
+      .forEach((item) => item.classList.remove("active"));
+
+    // 클릭된 div에 active 클래스 추가
+    div.classList.add("active");
+  });
+});
+
 function displayLectures(lectureData) {
   console.log(lectureData.length);
   if (lectureData.length > 0) {
     const allCourse = document.querySelector(".allCourse");
-    allCourse.innerHTML = ""; // 기존 강좌 초기화
-
     lectureData.forEach((data) => {
       const allCourseClick = document.createElement("div");
       allCourseClick.classList.add("allCourseClick");
 
-      // 이미지 태그 추가
-      const imgElement = document.createElement("img");
-      imgElement.src = "/img/전체강좌_기타.jpg";
-      imgElement.classList.add("allCourseClickImg");
-      allCourseClick.appendChild(imgElement);
+      const allCourseClickImg = document.createElement("div");
+      allCourseClickImg.classList.add("allCourseClickImg");
+      allCourseClickImg.style.backgroundImage = `url('/img/전체강좌_기타.jpg')`; // 이미지 설정
 
-      // 텍스트 추가
-      const courseText = document.createElement("div");
-      courseText.classList.add("courseText");
-      courseText.textContent = "기타"; // 기본 텍스트 설정
-      allCourseClick.appendChild(courseText);
+      const textContainer = document.createElement("div");
+      textContainer.classList.add("textContainer");
 
-      // 상세 텍스트 추가
-      const detailedText = document.createElement("div");
-      detailedText.classList.add("detailedText");
-      detailedText.textContent = "초보부터 고수까지\n1:1 맞춤교육"; // 줄바꿈 포함한 상세 텍스트 설정
-      courseText.appendChild(detailedText);
+      const mainText = document.createElement("p");
+      mainText.classList.add("mainText");
+      mainText.textContent = data.lectureName;
+      textContainer.appendChild(mainText);
 
+      const subText = document.createElement("p");
+      subText.classList.add("subText");
+      subText.innerHTML = "초보부터 고수까지<br>1:1 맞춤교육";
+      textContainer.appendChild(subText);
+
+      allCourseClickImg.appendChild(textContainer);
+      allCourseClick.appendChild(allCourseClickImg);
       allCourse.appendChild(allCourseClick);
 
-      allCourseClick.addEventListener("click", () => {
-        const urlLecture = "http://localhost:8080/lectures/" + data.lectureId;
-
-        axios
-          .get(urlLecture)
-          .then((response) => {
-            console.log("데이터: ", response.data);
-            displayLecture(response.data);
-
-            if (response.status == 200) {
-              document
-                .querySelector(".allCourseDetailBox")
-                .classList.remove("hidden");
-              document.querySelector(".tasteCourseBox").classList.add("hidden");
-              document.querySelector(".allCourseBox").classList.add("hidden");
-            }
-          })
-          .catch((error) => {
-            console.log("에러 발생: ", error);
-          });
+      allCourseClickImg.addEventListener("click", () => {
+        window.location.href = "lecture.html?lectureId=" + data.lectureId;
       });
     });
   }
-}
-
-function displayLecture(data) {
-  const allCourseDetailBox = document.querySelector(".allCourseDetailBox");
-
-  allCourseDetailBox.innerHTML = ""; // 기존 내용을 초기화
-
-  const backBtn = document.createElement("div");
-  const detailedBox = document.createElement("div");
-  const detailedBox2 = document.createElement("div");
-  const detailedBox2Img = document.createElement("div");
-  const detailedBox2Text = document.createElement("div");
-  const detailedBox2Text2 = document.createElement("div");
-
-  backBtn.classList.add("backBtn");
-  detailedBox.classList.add("detailedBox");
-  detailedBox2.classList.add("detailedBox2");
-  detailedBox2Img.classList.add("detailedBox2Img");
-  detailedBox2Text.classList.add("detaildBox2Text");
-  detailedBox2Text2.classList.add("detaildBox2Text2");
-
-  detailedBox.textContent = data.lectureName;
-  detailedBox2Text.textContent = data.lectureText;
-
-  allCourseDetailBox.appendChild(backBtn);
-  allCourseDetailBox.appendChild(detailedBox);
-  allCourseDetailBox.appendChild(detailedBox2);
-  detailedBox2.appendChild(detailedBox2Img);
-  detailedBox2.appendChild(detailedBox2Text);
-  detailedBox2.appendChild(detailedBox2Text2);
-
-  backBtn.addEventListener("click", () => {
-    document.querySelector(".allCourseBox").classList.remove("hidden");
-    document.querySelector(".tasteCourseBox").classList.add("hidden");
-    document.querySelector(".coursePriceGuideBox").classList.add("hidden");
-    document.querySelector(".allCourseDetailBox").classList.add("hidden");
-  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -139,42 +94,36 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("coursePriceGuideBtn not found");
   }
-});
 
-document.querySelectorAll(".subMenu > div").forEach((div) => {
-  div.addEventListener("click", () => {
-    document
-      .querySelectorAll(".subMenu > div")
-      .forEach((item) => item.classList.remove("active"));
-
-    // 클릭된 div에 active 클래스 추가
-    div.classList.add("active");
-  });
-});
-
-/* 모달창 */
-document.addEventListener("DOMContentLoaded", function () {
-  const tasteCourseClickAvi = document.getElementsByClassName(
-    "tasteCourseClickAvi"
-  );
+  /* 모달창 */
+  const tasteCourseClickImg = document.querySelectorAll(".tasteCourseClickImg");
   const modal = document.getElementById("courseModal");
   const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalVideo = document.getElementById("modalVideo");
 
-  function toggleModal() {
+  function toggleModal(videoUrl) {
+    if (videoUrl) {
+      modalVideo.src = videoUrl;
+    }
     modal.classList.toggle("show");
   }
 
-  for (let i = 0; i < tasteCourseClickAvi.length; i++) {
-    tasteCourseClickAvi[i].addEventListener("click", toggleModal);
-  }
+  tasteCourseClickImg.forEach((item) => {
+    item.addEventListener("click", function () {
+      const videoUrl = this.getAttribute("data-video-url");
+      toggleModal(videoUrl);
+    });
+  });
 
   modalCloseBtn.addEventListener("click", function () {
     toggleModal();
+    modalVideo.src = ""; // 모달 닫을 때 비디오 정지
   });
 
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       toggleModal();
+      modalVideo.src = ""; // 모달 닫을 때 비디오 정지
     }
   });
 });
