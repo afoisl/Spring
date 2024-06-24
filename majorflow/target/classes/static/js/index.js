@@ -28,13 +28,16 @@ function sessionCurrent() {
         console.log("세션 유지");
         document.querySelector(".loginBtn").classList.add("hidden");
         if (
-          response.status == 200 ||
-          response.data.authority == "ROLE_USER" ||
-          response.data.authority == "ROLE_TEACHER"
+          response.status == 200 &&
+          (response.data.authority[0].authority == "ROLE_USER" ||
+            response.data.authority[0].authority == "ROLE_TEACHER")
         ) {
           console.log("권한이 User or Teacher일 때 데이터 : ", response);
           document.querySelector(".adminBtn").classList.add("hidden");
-        } else {
+        } else if (
+          response.status == 200 &&
+          response.data.authority[0].authority == "ROLE_ADMIN"
+        ) {
           console.log("권한이 Admin일 때 데이터 : ", response);
           document.querySelector(".adminBtn").classList.remove("hidden");
         }
