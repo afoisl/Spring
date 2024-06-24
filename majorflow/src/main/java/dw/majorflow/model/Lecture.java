@@ -22,7 +22,7 @@ public class Lecture {
     private String lectureName;
 
     @Column
-    private int price;
+    private int price = 0;;
 
     @Column(name = "lecture_image")
     private String lectureImage;

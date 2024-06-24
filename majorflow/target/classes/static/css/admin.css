@@ -277,16 +277,29 @@ table {
   padding: 20px;
 }
 
+.lectureUserList {
+  display: none; 
+  padding: 10px;
+  border-top: 1px solid black;
+}
+
+.lectureUserList .studentName {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
 .courseUserGrid {
   display: grid;
   grid-template-columns: 9.8fr 0.2fr;
   margin-bottom: 20px;
+}
+.courseUserGrid.active + .lectureUserList {
+  display: block;
 }
 .lectureUserTitle {
   font-size: 30px;
   font-weight: bold;
 }
 .courseUserArrow {
-  font-size: 30px;
-  font-weight: bold;
+  cursor: pointer;
 }
