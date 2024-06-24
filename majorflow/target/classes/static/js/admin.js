@@ -56,30 +56,25 @@ function displayAdmin(data) {
     const adminUserAuthority = document.createElement("td");
     adminUserAuthority.classList.add("adminUserAuthority");
 
-    /* 라디오쪽 수정필요 체크가 적용안됨 ㅠㅠ */
+    // 권한 설정
 
-    const studentInput = document.createElement("input");
-    studentInput.type = "radio";
-    studentInput.name = `authority-${userData.userId}`; // 유니크한 name 속성을 설정
-    studentInput.value = "ROLE_USER";
-    studentInput.checked = userData.authority === "ROLE_USER";
+    const selectElement = document.createElement("select");
+    selectElement.name = `authority-${userData.userId}`;
 
-    const studentLabel = document.createElement("label");
-    studentLabel.textContent = " 학생";
+    const studentOption = document.createElement("option");
+    studentOption.value = "ROLE_USER";
+    studentOption.textContent = "학생";
+    studentOption.selected = userData.authority === "ROLE_USER";
 
-    const teacherInput = document.createElement("input");
-    teacherInput.type = "radio";
-    teacherInput.name = `authority-${userData.userId}`; // 유니크한 name 속성을 설정
-    teacherInput.value = "ROLE_TEACHER";
-    teacherInput.checked = userData.authority === "ROLE_TEACHER";
+    const teacherOption = document.createElement("option");
+    teacherOption.value = "ROLE_TEACHER";
+    teacherOption.textContent = "선생님";
+    teacherOption.selected = userData.authority === "ROLE_TEACHER";
 
-    const teacherLabel = document.createElement("label");
-    teacherLabel.textContent = " 선생님";
+    selectElement.appendChild(studentOption);
+    selectElement.appendChild(teacherOption);
 
-    adminUserAuthority.appendChild(studentInput);
-    adminUserAuthority.appendChild(studentLabel);
-    adminUserAuthority.appendChild(teacherInput);
-    adminUserAuthority.appendChild(teacherLabel);
+    adminUserAuthority.appendChild(selectElement);
 
     tr.appendChild(adminUserId);
     tr.appendChild(adminUserName);
@@ -95,6 +90,7 @@ function displayAdmin(data) {
   });
 }
 
+<<<<<<< HEAD
 // 강의별 수강중인 학생 목록 가져오기
 axios.get(urlLectures)
   .then((response) => {
@@ -126,6 +122,22 @@ document.querySelectorAll('.courseUserGrid').forEach(courseSection => {
 });
 
 
+=======
+function updateAuthority(userId, newAuthority) {
+  const updateUrl = `http://localhost:8080/user/update-authority/${userId}`;
+
+  axios
+    .put(updateUrl, { authority: newAuthority })
+    .then((response) => {
+      console.log("권한 업데이트 성공:", response.data);
+      // 성공적으로 업데이트된 경우에 대한 처리 (예: 메시지 표시 등)
+    })
+    .catch((error) => {
+      console.error("권한 업데이트 실패:", error);
+      // 업데이트 실패에 대한 처리 (예: 오류 메시지 표시 등)
+    });
+}
+>>>>>>> 29a5a243f9325c5d4ef1be7b04298b9f89d3aedc
 
 /* 유저가 수강중인 강의 보기 모달 */
 
