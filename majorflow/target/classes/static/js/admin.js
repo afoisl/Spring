@@ -1,4 +1,5 @@
 const urlAdmin = "http://localhost:8080/user/user";
+const urlLectures = "http://localhost:8080/lectures";
 
 axios
   .get(urlAdmin)
@@ -89,6 +90,39 @@ function displayAdmin(data) {
   });
 }
 
+<<<<<<< HEAD
+// 강의별 수강중인 학생 목록 가져오기
+axios.get(urlLectures)
+  .then((response) => {
+    console.log("강의 데이터: ", response.data);
+    displayCourseUsers(response.data);
+  })
+  .catch((error) => {
+    console.log("강의 데이터 가져오기 에러 발생: ", error);
+  });
+
+function displayCourseUsers(lectureData) {
+  lectureData.forEach(lectureData => {
+    const courseUserList = document.querySelector(`.${lectureData.courseName.toLowerCase()}LectureUserName`);
+
+    course.students.forEach(student => {
+      const studentElement = document.createElement("div");
+      studentElement.classList.add("studentName");
+      studentElement.textContent = student.name;
+      courseUserList.appendChild(studentElement);
+    });
+  });
+}
+document.querySelectorAll('.courseUserGrid').forEach(courseSection => {
+  courseSection.addEventListener('click', () => {
+    courseSection.classList.toggle('active');
+    const lectureUserList = courseSection.nextElementSibling;
+    lectureUserList.style.display = lectureUserList.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+
+=======
 function updateAuthority(userId, newAuthority) {
   const updateUrl = `http://localhost:8080/user/update-authority/${userId}`;
 
@@ -103,6 +137,7 @@ function updateAuthority(userId, newAuthority) {
       // 업데이트 실패에 대한 처리 (예: 오류 메시지 표시 등)
     });
 }
+>>>>>>> 29a5a243f9325c5d4ef1be7b04298b9f89d3aedc
 
 /* 유저가 수강중인 강의 보기 모달 */
 
