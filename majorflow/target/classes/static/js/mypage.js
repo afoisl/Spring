@@ -73,6 +73,7 @@ function sessionCurrent() {
         );
 
         if (purchasedItems && purchasedItems.length > 0) {
+          console.log(purchasedItems);
           displayMylectures(purchasedItems, userInfo);
         } else {
           document.querySelector(".progress-container").classList.add("noInfo");
@@ -90,72 +91,105 @@ function sessionCurrent() {
 
   function displayMylectures(items, user) {
     const myLectureBox = document.querySelector(".myLectureBox");
-    const progressTitle = document.createElement("div");
+    myLectureBox.innerHTML = "";
 
-    progressTitle.classList.add("progressTitle");
-    progressTitle.textContent = user.userId + "님의 수강신청 현황";
-    progressBox.appendChild(progressTitle);
+    const myLectureBoxGrid = document.createElement("div");
+    const myLectureTitle = document.createElement("div");
+
+    myLectureBoxGrid.classList.add("myLectureBoxGrid");
+    myLectureTitle.classList.add("myLectureTitle");
+    myLectureTitle.textContent = user.userId + "님의 수강신청 현황";
+    myLectureBox.appendChild(myLectureTitle);
+    myLectureBox.appendChild(myLectureBoxGrid);
 
     items.forEach((item) => {
-      const progressInfoBox = document.createElement("div");
-      const progressTitleBox = document.createElement("div");
-      const progressSubjectName = document.createElement("div");
-      const progressSubjectInfo = document.createElement("div");
-      const progressInfo1 = document.createElement("div");
+      const myLectureInfoBox = document.createElement("div");
+      const myLectureTitleBox = document.createElement("div");
+      const myLectureSubjectName = document.createElement("div");
+      const myLectureInfo1 = document.createElement("div");
+      const myLectureImgBox = document.createElement("div");
+      const myLectureImg = document.createElement("img");
+      const myLectureType = document.createElement("div");
+      const studyLectureBtn = document.createElement("div");
+      const studyLectureBtnBox = document.createElement("div");
 
-      progressInfoBox.classList.add("progressInfoBox");
-      progressTitleBox.classList.add("progressTitleBox");
-      progressSubjectName.classList.add("progressSubjectName");
-      progressSubjectInfo.classList.add("progressSubjectInfo");
-      progressInfo1.classList.add("progressInfo");
+      myLectureImg.src = items.lectureImage;
+      myLectureImgBox.classList.add("myLectureImgBox");
+      myLectureInfoBox.classList.add("myLectureInfoBox");
+      myLectureTitleBox.classList.add("myLectureTitleBox");
+      myLectureSubjectName.classList.add("myLectureSubjectName");
+      myLectureInfo1.classList.add("myLectureInfo");
+      myLectureType.classList.add("myLectureType");
+      studyLectureBtnBox.classList.add("studyLectureBtnBox");
+      studyLectureBtn.classList.add("studyLectureBtn");
 
-      progressSubjectName.textContent = item.lectureName;
-      progressSubjectInfo.textContent = item.teacherName;
+      myLectureSubjectName.textContent = item.lectureName;
+      myLectureType.textContent = item.type;
+      studyLectureBtn.textContent = "강의실 입장";
 
-      progressInfoBox.appendChild(progressTitleBox);
-      progressBox.appendChild(progressInfoBox);
-      progressTitleBox.appendChild(progressSubjectName);
-      progressTitleBox.appendChild(progressSubjectInfo);
-
-      progressInfoBox.appendChild(progressInfo1);
+      myLectureBoxGrid.appendChild(myLectureInfoBox);
+      myLectureInfoBox.appendChild(myLectureImgBox);
+      myLectureImgBox.appendChild(myLectureImg);
+      myLectureInfoBox.appendChild(myLectureTitleBox);
+      myLectureInfoBox.appendChild(myLectureType);
+      myLectureInfoBox.appendChild(studyLectureBtnBox);
+      studyLectureBtnBox.appendChild(studyLectureBtn);
+      myLectureTitleBox.appendChild(myLectureSubjectName);
     });
   }
 }
 
 function StudyMylectures(items, user) {
-  const progressContainer = document.querySelector(".progress-container");
+  const progressBox = document.querySelector(".progressBox");
+  progressBox.innerHTML = "";
+
   const progressTitle = document.createElement("div");
-
-  const progressBox = document.createElement("div");
-
-  progressBox.classList.add("wbox", "progressBox");
   progressTitle.classList.add("progressTitle");
 
   progressTitle.textContent = user.userId + "님의 강의실";
 
-  progressContainer.appendChild(progressBox);
   progressBox.appendChild(progressTitle);
 
   items.forEach((item) => {
+    let progressNum = 10;
+
+    const progressImgBox = document.createElement("div");
+    const progressImg = document.createElement("img");
     const progressInfoBox = document.createElement("div");
     const progressTitleBox = document.createElement("div");
     const progressSubjectName = document.createElement("div");
-    const progressSubjectInfo = document.createElement("div");
+    const progressType = document.createElement("div");
+    const progressGraph = document.createElement("div");
+    const progressStudyBtn = document.createElement("div");
+    const progressBtnBox = document.createElement("div");
+
     const progressInfo1 = document.createElement("div");
 
+    progressInfo1.classList.add("progressInfo");
+    progressImgBox.classList.add("progressImgBox");
     progressInfoBox.classList.add("progressInfoBox");
     progressTitleBox.classList.add("progressTitleBox");
     progressSubjectName.classList.add("progressSubjectName");
-    progressSubjectInfo.classList.add("progressSubjectInfo");
-    progressInfo1.classList.add("progressInfo");
+    progressType.classList.add("progressType");
+    progressImg.classList.add("progressImg");
+    progressBtnBox.classList.add("progressBtnBox");
+    progressGraph.classList.add("progressGraph");
+    progressStudyBtn.classList.add("progressStudyBtn");
 
     progressSubjectName.textContent = item.lectureName;
-    progressSubjectInfo.textContent = item.teacherName;
+    progressType.textContent = item.type;
+    progressGraph.textContent = "진도율" + progressNum + "%";
+    progressStudyBtn.textContent = "학습하기";
 
+    progressInfoBox.appendChild(progressImgBox);
+    progressImgBox.appendChild(progressImg);
     progressInfoBox.appendChild(progressTitleBox);
+    progressInfoBox.appendChild(progressBtnBox);
+    progressBtnBox.appendChild(progressGraph);
+    progressBtnBox.appendChild(progressStudyBtn);
     progressBox.appendChild(progressInfoBox);
     progressTitleBox.appendChild(progressSubjectName);
-    progressTitleBox.appendChild(progressSubjectInfo);
+    progressTitleBox.appendChild(progressType);
 
     progressInfoBox.appendChild(progressInfo1);
   });

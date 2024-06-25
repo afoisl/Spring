@@ -8,35 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
     rel="stylesheet" />
   <title>고객센터-공지사항</title>
-  <!-- table 자체 css  -->
-  <!-- <style>
-      .noticeTable {
-          width: 100%;
-          border: 1px solid black;
-          text-align: center;
-          padding: 20px;
-          border-collapse: separate;
-          border-spacing: 10px 25px;
-      }
-      #noticeCheckbox {
-          width: 10%;
-          padding: 20px;
-          border: 1px solid black;
-          border-collapse: separate;
-          border-spacing: 10px 25px;
-      }
-      .noticeTable th, .noticeTable td {
-          border: 1px solid black;
-          padding: 10px;
-      }
-      #noticeCheckbox td {
-          padding: 11px;
-      }
-
-  </style> -->
   <script src="https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js"></script>
 </head>
 
@@ -72,6 +46,7 @@
       </div>
       <div class="wbox subMenu">
         <div class="noticeBtn active">공지사항</div>
+        <div class="customerInquiryBtn">1:1 문의</div>
       </div>
     </div>
     <div class="box2">
@@ -86,42 +61,6 @@
           <div class="noticeBox3-4">
             <p class="noticeBox4">공지내용</p>
             <div class="noticeBox5">
-              <img src="/TemaProject/img/말풍선.png" />
-              <div class="noticeBox5-1">댓글달기</div>
-            </div>
-          </div>
-          <a class="noticeBox3-2">
-            <span class="noticeBox3-3 open">∨</span>
-            <span class="noticeBox3-3 close">∧</span>
-          </a>
-        </div>
-        <div class="noticeBox2">
-          <div class="noticeBox3">
-            <div class="noticeBox3-1">공지 제목</div>
-            <div class="noticeBox3-1">작성일자</div>
-          </div>
-          <div class="noticeBoxLine"></div>
-          <div class="noticeBox3-4">
-            <p class="noticeBox4">공지내용</p>
-            <div class="noticeBox5">
-              <img src="/TemaProject/img/말풍선.png" />
-              <div class="noticeBox5-1">댓글달기</div>
-            </div>
-          </div>
-          <a class="noticeBox3-2">
-            <span class="noticeBox3-3 open">∨</span>
-            <span class="noticeBox3-3 close">∧</span>
-          </a>
-        </div>
-        <div class="noticeBox2">
-          <div class="noticeBox3">
-            <div class="noticeBox3-1">공지 제목</div>
-            <div class="noticeBox3-1">작성일자</div>
-          </div>
-          <div class="noticeBoxLine"></div>
-          <div class="noticeBox3-4">
-            <p class="noticeBox4">공지내용</p>
-            <div class="noticeBox5">
               <img src="/img/말풍선.png" />
               <div class="noticeBox5-1">댓글달기</div>
             </div>
@@ -167,15 +106,44 @@
             <span class="noticeBox3-3 close">∧</span>
           </a>
         </div>
-        <div class="noticeBox6">글쓰기</div>
+        <div class="noticeBox2">
+          <div class="noticeBox3">
+            <div class="noticeBox3-1">공지 제목</div>
+            <div class="noticeBox3-1">작성일자</div>
+          </div>
+          <div class="noticeBoxLine"></div>
+          <div class="noticeBox3-4">
+            <p class="noticeBox4">공지내용</p>
+            <div class="noticeBox5">
+              <img src="/img/말풍선.png" />
+              <div class="noticeBox5-1">댓글달기</div>
+            </div>
+          </div>
+          <a class="noticeBox3-2">
+            <span class="noticeBox3-3 open">∨</span>
+            <span class="noticeBox3-3 close">∧</span>
+          </a>
+        </div>
+        <div class="noticeBox2">
+          <div class="noticeBox3">
+            <div class="noticeBox3-1">공지 제목</div>
+            <div class="noticeBox3-1">작성일자</div>
+          </div>
+          <div class="noticeBoxLine"></div>
+          <div class="noticeBox3-4">
+            <p class="noticeBox4">공지내용</p>
+            <div class="noticeBox5">
+              <img src="/img/말풍선.png" />
+              <div class="noticeBox5-1">댓글달기</div>
+            </div>
+          </div>
+          <a class="noticeBox3-2">
+            <span class="noticeBox3-3 open">∨</span>
+            <span class="noticeBox3-3 close">∧</span>
+          </a>
+        </div>
       </div>
-      <!-- 공지사항 등록 -->
-      <div class="wbox noticeWriteBox hidden">
-        <div class="noticeBox1">공지사항 등록</div>
-        <div class="noticeWriteBox1">Text</div>
-        <div class="noticeWriteBox2"></div>
-        <div class="noticeWriteBox3">text</div>
-      </div>
+      <!-- 공지사항 등록 부분 제거 -->
       <!-- 1:1문의 -->
       <div class="wbox customerInquiryBox hidden">
         <div class="customerInquiryBox1">고객문의</div>
@@ -227,6 +195,17 @@
       <h3>FOOTER</h3>
     </div>
   </div>
+
+  <!-- 모달창 HTML 추가 -->
+  <div id="commentModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>댓글 달기</h2>
+      <textarea id="commentInput" class="commentInput" placeholder="댓글을 입력하세요..."></textarea>
+      <button id="commentSubmit" class="commentSubmit">댓글 등록</button>
+    </div>
+  </div>
+
   <script src="/js/customer.js"></script>
 </body>
 

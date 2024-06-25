@@ -23,7 +23,7 @@ function displayAdmin(data) {
 
     const adminUserName = document.createElement("td");
     adminUserName.classList.add("adminUserName");
-    adminUserName.textContent = userData.username;
+    adminUserName.textContent = userData.name;
 
     const adminUserNickname = document.createElement("td");
     adminUserNickname.classList.add("adminUserNickname");
