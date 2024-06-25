@@ -36,4 +36,7 @@ public class Lecture {
     @ManyToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
+
+    @Column
+    private String lectureClass;
 }
