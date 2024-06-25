@@ -53,4 +53,7 @@ public class EduTechService {
         }
     }
 
+    public List<EduTech> getEduTechByUserId(String userId) {
+        return edutechRepository.findByUserUserId(userId);
+    }
 }

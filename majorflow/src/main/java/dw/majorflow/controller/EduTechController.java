@@ -31,4 +31,10 @@ public class EduTechController {
         eduTechService.saveEduTech(userId, lectureId);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+    @GetMapping("/user/{userId}/lectures")
+    public ResponseEntity<List<EduTech>> getEduTechByUserId(@PathVariable("userId") String userId) {
+        List<EduTech> eduTechList = eduTechService.getEduTechByUserId(userId);
+        return new ResponseEntity<>(eduTechList, HttpStatus.OK);
+    }
 }
