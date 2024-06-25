@@ -30,8 +30,8 @@ public class Lecture {
     @Column
     private String category;
 
-    @Column(name = "lecture_text", length = 65535)
-    private String lectureText;
+    @Column(name = "lecture_course")
+    private String lectureCourse;
 
     @ManyToOne
     @JoinColumn(name = "teacher_id")

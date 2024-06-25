@@ -24,30 +24,26 @@ function displayLecture(data) {
   const backBtnImg = document.createElement("img");
   const detailedBox = document.createElement("div");
   const detailedBox2Img = document.createElement("div");
-  const detailedBox2Text = document.createElement("div");
-  const detailedBox2Text2 = document.createElement("div");
+  const detailedBox2Course = document.createElement("img");
 
   backBtn.classList.add("backBtn");
   backBtnImg.classList.add("backBtnImg");
   detailedBox.classList.add("detailedBox");
   detailedBox2.classList.add("detailedBox2");
   detailedBox2Img.classList.add("detailedBox2Img");
-  detailedBox2Text.classList.add("detaildBox2Text");
-  detailedBox2Text2.classList.add("detaildBox2Text2");
 
   //이미지 속성 추가 필요
   backBtnImg.src = "/img/뒤로가기검정.png";
   backBtnImg.alt = "뒤로가기";
   detailedBox.textContent = data.lectureName;
-  detailedBox2Text.textContent = data.lectureText;
+  detailedBox2Course.src = data.lectureCourse;
 
   backBtn.appendChild(backBtnImg);
   allCourseDetailBox.appendChild(backBtn);
   allCourseDetailBox.appendChild(detailedBox);
   allCourseDetailBox.appendChild(detailedBox2);
   detailedBox2.appendChild(detailedBox2Img);
-  detailedBox2.appendChild(detailedBox2Text);
-  detailedBox2.appendChild(detailedBox2Text2);
+  detailedBox2.appendChild(detailedBox2Course);
   backBtn.addEventListener("click", () => {
     window.location.href = "course.html";
   });
