@@ -100,21 +100,6 @@ document.querySelectorAll(".courseUserGrid").forEach((courseSection) => {
   });
 });
 
-function updateAuthority(userId, newAuthority) {
-  const updateUrl = `http://localhost:8080/user/update-authority/${userId}`;
-
-  axios
-    .put(updateUrl, { authority: newAuthority })
-    .then((response) => {
-      console.log("권한 업데이트 성공:", response.data);
-      // 성공적으로 업데이트된 경우에 대한 처리 (예: 메시지 표시 등)
-    })
-    .catch((error) => {
-      console.error("권한 업데이트 실패:", error);
-      // 업데이트 실패에 대한 처리 (예: 오류 메시지 표시 등)
-    });
-}
-
 /* 유저가 수강중인 강의 보기 모달 */
 
 const tbody = document.querySelector(".tbody");
