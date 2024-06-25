@@ -40,3 +40,4 @@ public class Lecture {
     @Column
     private String lectureClass;
 }
+
