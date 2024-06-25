@@ -1334,9 +1334,6 @@ body {
 }
 
 /* 수강후기 */
-.review {
-  height: 2000px;
-}
 .reviewBox {
   width: 100%;
   height: 300px;
@@ -1357,30 +1354,27 @@ body {
   justify-items: center;
 }
 .reviewBox4 {
-  width: 192px;
+  width: 240px;
   height: 47px;
-  border: 1px solid black;
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 47px;
 }
 #reviewBox3-1 {
   width: 288px;
   height: 70px;
-  border: 1px solid black;
   text-align: center;
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 70px;
   margin-top: 50px;
 }
 #reviewBox3-2 {
-  width: 210px;
+  width: 288px;
   height: 70px;
-  border: 1px solid black;
   text-align: center;
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 70px;
   margin-top: 50px;
@@ -1470,9 +1464,10 @@ body {
   */
 .reviewBox6 {
   width: 85%;
+  height: 1000px;
   margin: auto;
 }
-#reviewBox6-1 {
+.reviewBox6-1 {
   width: 230px;
   height: 56px;
   font-size: 30px;
@@ -1480,7 +1475,8 @@ body {
   text-align: center;
   line-height: 56px;
   position: relative;
-  top: -30px;
+  top: -70px;
+  margin-left: 80px;
 }
 .reviewBox7 {
   width: 100%;
@@ -1527,6 +1523,7 @@ body {
   height: 133px;
   border: 1px solid black;
   margin: 20px 50px 0 0;
+  padding: 20px;
 }
 .reviewBox9Grid {
   display: grid;
