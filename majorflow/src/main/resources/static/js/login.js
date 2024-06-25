@@ -33,6 +33,11 @@ document.querySelector(".sign-inBx").addEventListener("click", () => {
     });
 });
 
+// 뒤로 가기 함수
+function goBack() {
+  window.location.href = "index.html"; // 로그인 페이지로 이동
+}
+
 function sessionCurrent() {
   axios
     .get("http://localhost:8080/user/current", { withCredentials: true })

@@ -291,7 +291,6 @@ body {
 }
 
 .rightMenu {
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -305,6 +304,11 @@ body {
 
 .mainMenu > div > span:hover {
   color: gray;
+}
+
+.rightMenuBx {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .title {
@@ -327,7 +331,7 @@ body {
 .subMenu > div {
   width: 250px;
   height: 50px;
-  margin: 20px 20px 20px 0px;
+  margin: 35px 20px 20px 0px;
   background-color: black;
   color: white;
   box-sizing: border-box;
@@ -1224,7 +1228,7 @@ body {
   padding: 20px 0;
 }
 
-/* 나의 진도율 페이지 설정 */
+/* new 수강신청 현황 */
 
 .myLectureBoxGrid {
   display: grid;
@@ -1382,6 +1386,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 .progressStudyBtn:hover {
@@ -1389,6 +1394,7 @@ body {
   height: 130px;
   background-color: white;
   color: #007bff;
+  border: 2px solid #007bff;
   border-radius: 20px;
   font-size: 22px;
   text-align: center;
@@ -1414,7 +1420,8 @@ body {
   margin: 50px;
 }
 
-/* 성적확인 페이지 설정 */
+/* 강의실 */
+
 .gradeTitle {
   font-size: 40px;
   font-weight: bold;

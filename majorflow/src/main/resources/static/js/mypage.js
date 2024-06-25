@@ -22,8 +22,8 @@ document.querySelector(".progressBtn").addEventListener("click", () => {
         if (purchasedItems && purchasedItems.length > 0) {
           StudyMylectures(purchasedItems, userInfo);
         } else {
-          document.querySelector(".progress-container").classList.add("noInfo");
-          document.querySelector(".progress-container").textContent =
+          document.querySelector(".progressBox").classList.add("noInfo");
+          document.querySelector(".progressBox").textContent =
             "구매한 항목이 없습니다.";
         }
       } else {
@@ -76,8 +76,8 @@ function sessionCurrent() {
           console.log(purchasedItems);
           displayMylectures(purchasedItems, userInfo);
         } else {
-          document.querySelector(".progress-container").classList.add("noInfo");
-          document.querySelector(".progress-container").textContent =
+          document.querySelector(".myLectureBox").classList.add("noInfo");
+          document.querySelector(".myLectureBox").textContent =
             "구매한 항목이 없습니다.";
         }
       } else {
@@ -113,7 +113,7 @@ function sessionCurrent() {
       const studyLectureBtn = document.createElement("div");
       const studyLectureBtnBox = document.createElement("div");
 
-      myLectureImg.src = items.lectureImage;
+      myLectureImg.src = item.lectureImage;
       myLectureImgBox.classList.add("myLectureImgBox");
       myLectureInfoBox.classList.add("myLectureInfoBox");
       myLectureTitleBox.classList.add("myLectureTitleBox");
@@ -126,6 +126,10 @@ function sessionCurrent() {
       myLectureSubjectName.textContent = item.lectureName;
       myLectureType.textContent = item.type;
       studyLectureBtn.textContent = "강의실 입장";
+
+      studyLectureBtn.addEventListener("click", () => {
+        document.querySelector(".progressBtn").click();
+      });
 
       myLectureBoxGrid.appendChild(myLectureInfoBox);
       myLectureInfoBox.appendChild(myLectureImgBox);
@@ -151,7 +155,7 @@ function StudyMylectures(items, user) {
   progressBox.appendChild(progressTitle);
 
   items.forEach((item) => {
-    let progressNum = 10;
+    let progressNum = 0; // 초기 진도율을 0으로 설정
 
     const progressImgBox = document.createElement("div");
     const progressImg = document.createElement("img");
@@ -178,8 +182,16 @@ function StudyMylectures(items, user) {
 
     progressSubjectName.textContent = item.lectureName;
     progressType.textContent = item.type;
-    progressGraph.textContent = "진도율" + progressNum + "%";
+    progressGraph.textContent = "진도율 " + progressNum + "%";
     progressStudyBtn.textContent = "학습하기";
+
+    progressStudyBtn.addEventListener("click", () => {
+      if (progressNum < 100) {
+        // 진도율이 100%를 넘지 않도록 함
+        progressNum += 1;
+        progressGraph.textContent = "진도율 " + progressNum + "%";
+      }
+    });
 
     progressInfoBox.appendChild(progressImgBox);
     progressImgBox.appendChild(progressImg);
