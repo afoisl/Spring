@@ -35,7 +35,8 @@ document.querySelector(".sign-inBx").addEventListener("click", () => {
 
 // 뒤로 가기 함수
 function goBack() {
-  window.location.href = "index.html"; // 메인 페이지로 이동
+  const previousPage = document.referrer;
+  window.location.href = previousPage ? previousPage : "index.html";
 }
 
 function sessionCurrent() {
