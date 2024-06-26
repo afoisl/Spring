@@ -36,6 +36,9 @@ public class Lecture {
     @Column
     private int price;
 
+    @Column
+    private String thumbnailImg;
+
     @ManyToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
