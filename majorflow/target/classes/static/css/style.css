@@ -412,6 +412,12 @@ body {
   line-height: 40px;
 }
 
+.historyText2 {
+  margin: 30px 40px 30px 0px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
 /* 강사진 페이지 설정*/
 .teacherTitle {
   font-size: 40px;
@@ -795,6 +801,7 @@ body {
 
 /*공지사항*/
 
+/* margin 추가 오겸비 수정 */
 .noticeBox2 {
   width: 90%; /* 가로 길이 조정 */
   height: 110px;
@@ -818,6 +825,7 @@ body {
   width: 100%;
   height: 88px;
 }
+/* padding-left 추가 오겸비 수정 */
 .noticeBox3-1 {
   font-size: 24px; /* 텍스트 크기 축소 */
   font-weight: bold;
@@ -859,11 +867,13 @@ body {
   margin-bottom: 20px;
   border: 1px solid white; /* 연한 색상으로 변경 */
 }
+/* padding-left 추가 오겸비 수정 */
 .noticeBox4 {
   font-size: 18px; /* 텍스트 크기 축소 */
   height: 150px;
   padding-left: 20px;
 }
+/* padding 추가 오겸비 수정 */
 .noticeBox5 {
   display: flex;
   align-items: center; /* 수직 가운데 정렬 */
@@ -1501,7 +1511,7 @@ body {
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 
