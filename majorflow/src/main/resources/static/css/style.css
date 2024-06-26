@@ -364,9 +364,13 @@ body {
   height: 50px;
 }
 
-.cartIcon,
 .mypageIcon {
   width: 25px;
+  height: 25px;
+}
+
+.cartIcon {
+  width: 20px;
   height: 25px;
 }
 

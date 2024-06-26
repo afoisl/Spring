@@ -33,6 +33,9 @@ public class Lecture {
     @Column(name = "lecture_course")
     private String lectureCourse;
 
+    @Column
+    private int price;
+
     @ManyToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;

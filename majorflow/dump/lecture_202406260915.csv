@@ -1,9 +1,0 @@
-"lecture_id","category","lecture_class","lecture_course","lecture_image","lecture_name","video_path","teacher_id"
-1,Classic,취미반,/img/첼로_취미반.png,,첼로,,1
-2,Classic,입시반,/img/첼로_입시반.png,,첼로,,1
-3,Classic,취미반,/img/피아노_취미반.png,,피아노,,2
-4,Classic,입시반,/img/피아노_입시반.png,,피아노,,2
-5,Jazz,취미반,/img/기타_취미반.png,,기타,,3
-6,jazz,입시반,/img/기타_입시반.png,,기타,,3
-7,Pop,취미반,/img/드럼_취미반.png,,드럼,,4
-8,Pop,입시반,/img/드럼_입시반.png,,드럼,,4
