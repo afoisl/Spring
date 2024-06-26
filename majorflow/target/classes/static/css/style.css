@@ -374,11 +374,15 @@ body {
   height: 25px;
 }
 
-.cartIcon > img,
-.mypageIcon > img {
+/* .mypageIcon > img {
   width: 30px;
   height: 30px;
 }
+
+.cartIcon > img {
+  width: 25px;
+  height: 30px;
+} */
 
 /* 연혁 페이지 설정*/
 
@@ -796,6 +800,7 @@ body {
   height: 110px;
   border-radius: 25px;
   padding: 15px;
+  margin: 0 60px;
   position: relative;
   overflow: hidden;
   transition: height 0.3s ease, background-color 0.3s ease;
@@ -819,6 +824,7 @@ body {
   margin-right: 30px;
   line-height: 88px;
   color: #333; /* 텍스트 색상 변경 */
+  padding-left: 20px;
 }
 .noticeBox3-2 {
   cursor: pointer;
@@ -856,11 +862,13 @@ body {
 .noticeBox4 {
   font-size: 18px; /* 텍스트 크기 축소 */
   height: 150px;
+  padding-left: 20px;
 }
 .noticeBox5 {
   display: flex;
   align-items: center; /* 수직 가운데 정렬 */
   gap: 10px; /* 이미지와 텍스트 사이 간격 조정 */
+  padding: 0 1em;
 }
 
 .noticeBox5 img {
