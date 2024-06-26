@@ -55,7 +55,6 @@ body {
 }
 
 .rightMenu {
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -120,16 +119,14 @@ body {
   height: 50px;
 }
 
-.cartIcon,
 .mypageIcon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
-.cartIcon > img,
-.mypageIcon > img {
-  width: 30px;
-  height: 30px;
+.cartIcon {
+  width: 20px;
+  height: 25px;
 }
 
 /* 관리자페이지  */
@@ -322,6 +319,11 @@ table {
   padding: 15px;
   font-size: 25px;
   font-weight: bold;
+}
+
+.rightMenuBx {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .hidden {
