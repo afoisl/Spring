@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap");
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -267,8 +275,12 @@ body {
 .box3 {
   width: 100%;
   height: 500px;
-  background-color: black;
   margin-top: 50px;
+  background-image: url("/img/단체사진.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 .wbox {
   width: 70%;
@@ -401,15 +413,19 @@ body {
 }
 
 .historyText1 {
-  margin: 30px 40px 30px 40px;
+  margin: 30px 20px 30px 40px;
   font-size: 20px;
   line-height: 40px;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 500;
 }
 
 .historyText2 {
-  margin: 30px 40px 30px 0px;
+  margin: 30px 20px 30px 0px;
   font-size: 20px;
   line-height: 40px;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 500;
 }
 
 /* 강사진 페이지 설정*/
@@ -452,7 +468,9 @@ body {
 }
 
 .teacherName {
-  margin: 10px 0px 5px 0px;
+  margin: 15px 0px 5px 10px;
+  font-size: 25px;
+  font-family: "SUIT-Regular";
 }
 
 .teacherSubject {
@@ -576,6 +594,14 @@ body {
   font-size: 30px; /* 기타 텍스트 크기 증가 */
 }
 
+.textContainer .lecClass {
+  font-size: 17px;
+  margin: 14px 0 0 6px;
+}
+.mainTextBx {
+  display: flex;
+}
+
 .textContainer .subText {
   font-size: 16px; /* 서브 텍스트 크기 설정 */
   font-weight: normal; /* 서브 텍스트 굵기 얇게 */
@@ -611,7 +637,9 @@ body {
 .detailedBox2 {
   width: 100%;
   display: grid;
-  grid-template-columns: 1.8fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 .detailedBox2Img {
   width: 500px;
@@ -622,10 +650,6 @@ body {
 .detailedBox2Text {
   width: 600px;
   height: 650px;
-}
-.detailedBox2Text2 {
-  width: 100%;
-  height: 800px;
 }
 
 .tasteCourse {
@@ -639,10 +663,6 @@ body {
 
 .tasteCourseClick {
   margin: 20px 0 20px 0;
-}
-
-.tasteCourseClick > div {
-  margin: 0px 0 10px 0;
 }
 
 .tasteCourseClickImg {
@@ -661,6 +681,13 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+}
+
+.tasteName,
+.tasteTeacher {
+  margin: 15px 0 0 10px;
+  font-family: "SUIT-Regular";
+  font-size: 20px;
 }
 
 /* margin 추가 오겸비 수정 */
@@ -836,6 +863,10 @@ body {
   color: #333; /* 텍스트 색상 변경 */
   padding-left: 20px;
 }
+.noticeBox3Date {
+  text-align: center;
+  line-height: 88px;
+}
 .noticeBox3-2 {
   cursor: pointer;
   width: 2rem;
@@ -902,6 +933,7 @@ body {
   line-height: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "SUIT-Regular";
 }
 
 .noticeBox5-1:hover {
@@ -1053,21 +1085,23 @@ body {
 }
 
 .lectureEnrollname {
+  font-family: "SUIT-Regular";
   font-size: 30px;
   padding: 5px 0px 5px 0px;
   margin: 30px 0px 0px 0px;
 }
 
 .teacherEnrollname {
+  font-family: "SUIT-Regular";
   font-size: 20px;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 0px 5px 1px;
   margin: 0px 0px 30px 0px;
 }
 
-.enrollPrice > div {
-  display: inline-block;
-  padding: 20px 40px 20px 0px;
-  margin-right: 50px;
+.classEnrollName {
+  font-family: "SUIT-Regular";
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .cartEnrollBtn {
@@ -1321,7 +1355,7 @@ body {
 }
 
 .progressInfoBox {
-  height: 350px;
+  height: 290px;
   border: 1px solid gray;
   border-radius: 30px;
   padding: 20px;
@@ -1691,15 +1725,6 @@ body {
   font-size: 14px;
   margin: 0 15px 0 0;
 }
-.reviewBox9Grid-5 {
-  width: 80px;
-  height: 25px;
-  color: #3b3b3e;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-  margin: 0 15px 0 15px;
-}
 .reviewBox9Grid-3 {
   width: 62px;
   height: 25px;
@@ -1952,7 +1977,10 @@ body {
 .reviewWriteBtn,
 .moveToCartBtn,
 .cartBox6,
-.studyLectureBtn {
+.studyLectureBtn,
+.alertClose,
+#alertConfirm {
+  font-family: "SUIT-Regular";
   width: 200px;
   font-size: 16px;
   font-weight: 600;
@@ -1984,7 +2012,10 @@ body {
 .moveToCartBtn:hover,
 .cartBox6:hover,
 .studyLectureBtn:hover,
-.progressStudyBtn:hover {
+.progressStudyBtn:hover,
+.alertClose:hover,
+#alertConfirm:hover {
+  font-family: "SUIT-Regular";
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -1996,9 +2027,79 @@ body {
 .reviewWriteBtn:focus,
 .moveToCartBtn:focus,
 .cartBox6:focus,
-.studyLectureBtn:foucs,
-.progressStudyBtn:focus {
+.studyLectureBtn:focus,
+.progressStudyBtn:focus,
+.alertClose:focus,
+#alertConfirm:focus {
   outline: none;
+}
+
+/* alert 모달창 */
+.alertModal {
+  display: none; /* 기본적으로 숨김 처리 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+}
+
+.alertModal-content {
+  background-color: white;
+  height: 200px;
+  margin: 15% auto;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+.alertModalBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px 0;
+  grid-column-gap: 70px;
+}
+
+#alertModalMessage {
+  font-size: 24px;
+  text-align: center;
+}
+
+.alertClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  font-weight: 50px;
+  border-radius: 25px;
+}
+
+.alertClose:hover,
+.alertClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#alertConfirm {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  font-weight: 50px;
+  border-radius: 25px;
+}
+
+#alertConfirm:hover,
+#alertConfirm:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hidden {

@@ -91,8 +91,9 @@ function displayTeacher(data) {
   backBtnImg.src = "/img/뒤로가기검정.png";
   singleTeacherTitle.textContent = data.teacherName;
   singleTeacherImg.src = data.teacherImgPath;
-  singleTeacherInfo.textContent = "담당 강의명";
-  singleTeacherText2.textContent = "선생님 정보";
+  singleTeacherInfo.textContent = data.user.email;
+  singleTeacherText2.innerHTML =
+    "Lorem ipsum dolor sit amet. Sit ratione reiciendis est quidem liberoeos quas quia est obcaecati atque nam illum quia. Aut pariatur omnisut neque deleniti non voluptas accusamus est recusandae vitae eaofficia consectetur. Et dolores ipsam sed laborum consectetur utcupiditate voluptate rem quam magnam At Quis inventore ut veniamaccusantium qui voluptatum voluptas. Ea optio fugit non nesciuntalias nam animi sequi qui doloremque debitis sed voluptatemvoluptate. Ad exercitationem quis aut ipsum atque et odio corruptiqui necessitatibus consequatur id voluptates minus in modi doloremet explicabo mollitia. Et rerum iste aut odio inventore in maioresvelit et dicta inventore sed odio consequatur. Ea rerum beatae inincidunt voluptas et provident voluptas et commodi velit. Quo doloredicta id voluptatem reprehenderit et harum voluptatibus et iureneque ut maiores mollitia et saepe iure! Et sint saepe quo quae iureet quia pariatur et porro fugiat ut ipsum Quis est deseruntvoluptatem aut quos temporibus.";
 
   singleTeacherBox.appendChild(backBtn);
   backBtn.appendChild(backBtnImg);
@@ -151,22 +152,44 @@ function sessionCurrent() {
     });
 }
 
+function openModal(message) {
+  const alertModal = document.getElementById("myAlertModal");
+  const alertModalMessage = document.getElementById("alertModalMessage");
+  alertModalMessage.textContent = message;
+  alertModal.style.display = "block";
+}
+
+function closeModal() {
+  const alertModal = document.getElementById("myAlertModal");
+  alertModal.style.display = "none";
+}
+
+// 로그아웃 버튼 클릭 시 확인 모달 열기
 document.querySelector(".menuLogoutBtn").addEventListener("click", () => {
-  if (confirm("로그아웃하시겠습니까?")) {
-    axios
-      .post(urlLogout, {}, { withCredentials: true })
-      .then((response) => {
-        console.log("데이터: ", response);
-        if (response.status == 200) {
-          alert("로그아웃 되었습니다");
-          document.querySelector(".menuLoginBtn").classList.remove("hidden");
-          document.querySelector(".menuLogoutBtn").classList.add("hidden");
-        }
-      })
-      .catch((error) => {
-        console.log("에러 발생: ", error);
-      });
-  }
+  // 로그아웃 버튼 클릭 시 확인 모달 열기
+  openModal("로그아웃하시겠습니까?");
+});
+
+// 모달 내 확인 버튼 클릭 시 로그아웃 처리
+document.getElementById("alertConfirm").addEventListener("click", () => {
+  closeModal(); // 모달 닫기
+  axios
+    .post(urlLogout, {}, { withCredentials: true })
+    .then((response) => {
+      console.log("데이터: ", response);
+      if (response.status == 200) {
+        openModal("로그아웃 되었습니다");
+        closeModal();
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
+        document.querySelector(".menuLogoutBtn").classList.add("hidden");
+      }
+    })
+    .catch((error) => {
+      console.log("에러 발생: ", error);
+    });
+});
+document.querySelector(".alertClose").addEventListener("click", () => {
+  closeModal();
 });
 
 sessionCurrent();
