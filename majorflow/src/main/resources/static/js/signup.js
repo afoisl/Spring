@@ -36,6 +36,7 @@ function registerAddr() {
   var roadAddressDetail = document.getElementById("roadAddressDetail").value;
 
   if (zonecode && roadAddress && roadAddressDetail) {
+    signupAddress = `(${zonecode}) ${roadAddress} ${roadAddressDetail}`;
     alert(
       "주소가 등록되었습니다:\n" +
         "우편번호: " +
@@ -194,10 +195,6 @@ document.querySelector("#birthDate").addEventListener("change", (e) => {
 document.querySelector("#phoneNumber").addEventListener("change", (e) => {
   console.log(e.target.value);
   signupPhoneNumber = e.target.value;
-});
-document.querySelector("#roadAddressDetail").addEventListener("change", (e) => {
-  console.log(e.target.value);
-  signupAddress = e.target.value;
 });
 // document.querySelector(inputGender).addEventListener("change", (e) => {
 //   console.log(e.target.value);
