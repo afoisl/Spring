@@ -198,12 +198,6 @@ function StudyMylectures(user) {
         progressStudyBtn.textContent = "학습하기";
 
         progressStudyBtn.addEventListener("click", () => {
-          if (progressNum < 100) {
-            // 진도율이 100%를 넘지 않도록 함
-            progressNum += 1;
-            progressGraph.textContent = "진도율 " + progressNum + "%";
-          }
-
           // 모달 열기 및 비디오 재생
           modal.style.display = "block";
           modalVideo.poster = item.lecture.thumbnailImg; // 썸네일 이미지 설정
@@ -212,6 +206,15 @@ function StudyMylectures(user) {
           setTimeout(() => {
             modalVideo.play();
           }, 2000); // 2초 후에 비디오 재생
+
+          modalVideo.addEventListener("timeupdate", () => {
+            const currentTime = modalVideo.currentTime;
+            const duration = modalVideo.duration;
+            if (duration > 0) {
+              progressNum = Math.min(100, Math.round((currentTime / duration) * 100));
+              progressGraph.textContent = `진도율 ${progressNum}%`;
+              }
+          });
         });
 
         progressInfoBox.appendChild(progressImgBox);
