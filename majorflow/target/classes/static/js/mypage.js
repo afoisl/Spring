@@ -23,8 +23,9 @@ document.querySelector(".progressBtn").addEventListener("click", () => {
 
         StudyMylectures(userInfo);
       } else {
-        openModal("로그인이 필요합니다.");
-        window.location.href = "login.html";
+        openModal("로그인이 필요합니다.", () => {
+          window.location.href = "login.html";
+        });
       }
     })
     .catch((error) => {
@@ -66,8 +67,9 @@ function sessionCurrent() {
 
         displayMylectures(userInfo);
       } else {
-        openModal("로그인이 필요합니다.");
-        window.location.href = "login.html";
+        openModal("로그인이 필요합니다.", () => {
+          window.location.href = "login.html";
+        });
       }
     })
     .catch((error) => {
@@ -243,11 +245,17 @@ window.onclick = function (event) {
   }
 };
 
-function openModal(message) {
+function openModal(message, callback) {
   const alertModal = document.getElementById("myAlertModal");
   const alertModalMessage = document.getElementById("alertModalMessage");
   alertModalMessage.textContent = message;
   alertModal.style.display = "block";
+
+  const confirmButton = document.getElementById("alertConfirm");
+  confirmButton.onclick = function () {
+    callback && callback(); // 콜백이 있을 경우 실행
+    closeModal(); // 모달 닫기
+  };
 }
 
 function closeModal() {

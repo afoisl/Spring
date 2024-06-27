@@ -1,5 +1,6 @@
 const urlAdmin = "http://localhost:8080/user/user";
 const urlLectures = "http://localhost:8080/edutech/get";
+const urlLogout = "http://localhost:8080/user/logout";
 
 document.querySelector(".noticeWriteBtn").addEventListener("click", () => {
   document.querySelector(".noticeWriteBox").classList.remove("hidden");
@@ -24,8 +25,9 @@ function sessionCurrent() {
         document.querySelector(".menuLoginBtn").classList.add("hidden");
         document.querySelector(".menuLogoutBtn").classList.remove("hidden");
       } else {
-        alert("로그인이 필요합니다.");
-        window.location.href = "login.html";
+        openModal("로그인이 필요합니다.", () => {
+          window.location.href = "login.html";
+        });
       }
     })
     .catch((error) => {
@@ -33,11 +35,17 @@ function sessionCurrent() {
     });
 }
 
-function openModal(message) {
+function openModal(message, callback) {
   const alertModal = document.getElementById("myAlertModal");
   const alertModalMessage = document.getElementById("alertModalMessage");
   alertModalMessage.textContent = message;
   alertModal.style.display = "block";
+
+  const confirmButton = document.getElementById("alertConfirm");
+  confirmButton.onclick = function () {
+    callback && callback(); // 콜백이 있을 경우 실행
+    closeModal(); // 모달 닫기
+  };
 }
 
 function closeModal() {
@@ -46,29 +54,31 @@ function closeModal() {
 }
 
 // 로그아웃 버튼 클릭 시 확인 모달 열기
+//document.querySelector(".menuLogoutBtn").addEventListener("click", () => {
+//  openModal("로그아웃하시겠습니까?");
+//});
+
 document.querySelector(".menuLogoutBtn").addEventListener("click", () => {
-  openModal("로그아웃하시겠습니까?");
+  openModal("로그아웃하시겠습니까?", () => {
+    axios
+      .post(urlLogout, {}, { withCredentials: true })
+      .then((response) => {
+        console.log("데이터: ", response);
+        if (response.status == 200) {
+          openModal("로그아웃 되었습니다"); // 모달 열기
+          closeModal();
+          // 여기에 로그아웃 성공 후의 추가 동작을 넣으세요
+          document.querySelector(".menuLoginBtn").classList.remove("hidden");
+          document.querySelector(".menuLogoutBtn").classList.add("hidden");
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.log("에러 발생: ", error);
+      });
+  });
 });
 
-// 모달 내 확인 버튼 클릭 시 로그아웃 처리
-document.getElementById("alertConfirm").addEventListener("click", () => {
-  closeModal(); // 모달 닫기
-  axios
-    .post(urlLogout, {}, { withCredentials: true })
-    .then((response) => {
-      console.log("데이터: ", response);
-      if (response.status == 200) {
-        openModal("로그아웃 되었습니다"); // 모달 열기
-        closeModal();
-        // 여기에 로그아웃 성공 후의 추가 동작을 넣으세요
-        document.querySelector(".menuLoginBtn").classList.remove("hidden");
-        document.querySelector(".menuLogoutBtn").classList.add("hidden");
-      }
-    })
-    .catch((error) => {
-      console.log("에러 발생: ", error);
-    });
-});
 // 모달 내 취소 버튼 클릭 시 모달 닫기
 document.querySelector(".alertClose").addEventListener("click", () => {
   closeModal(); // 모달 닫기
@@ -88,11 +98,14 @@ function displayAdmin(data) {
   const tbody = document.querySelector(".tbody");
 
   data.forEach((userData) => {
+    const userId = userData.userId;
+
     const tr = document.createElement("tr");
 
     const adminUserId = document.createElement("td");
     adminUserId.classList.add("adminUserId");
     adminUserId.textContent = userData.userId;
+    adminUserId.dataset.userId = userId; // Store userId in a data attribute
 
     const adminUserName = document.createElement("td");
     adminUserName.classList.add("adminUserName");
@@ -137,7 +150,77 @@ function displayAdmin(data) {
     tr.appendChild(adminUserGenre);
     tbody.appendChild(tr);
   });
+
+  tbody.addEventListener("click", function (event) {
+    const target = event.target;
+    if (target.classList.contains("adminUserId")) {
+      const userId = target.dataset.userId; // Retrieve userId from data attribute
+      modal.style.display = "block";
+      axios
+        .get("http://localhost:8080/edutech/user/" + userId + "/lectures")
+        .then((response) => {
+          console.log("데이터 :", response.data);
+          const lectureInfo = response.data;
+          const userCourse = document.querySelector(".userCourse");
+
+          // Clear previous content
+          userCourse.innerHTML = "";
+
+          const userCourseText = document.createElement("div");
+          userCourseText.classList.add("userCourseText");
+          userCourseText.textContent = userId + "님이 수강중인 강의";
+
+          const userCourseGrid = document.createElement("div");
+          userCourseGrid.classList.add("userCourseGrid");
+
+          userCourse.appendChild(userCourseText);
+          userCourse.appendChild(userCourseGrid);
+          lectureInfo.forEach((info) => {
+            const courseTeacherImgDiv = document.createElement("div");
+            courseTeacherImgDiv.classList.add("courseTeacherImg");
+
+            const courseTeacherImg = document.createElement("img");
+            courseTeacherImg.src = info.lecture.teacher.teacherImgPath;
+
+            const courseTitle = document.createElement("div");
+            courseTitle.classList.add("courseTitle");
+            courseTitle.textContent =
+              info.lecture.lectureName + " " + info.lecture.lectureClass;
+
+            const courseTeacherName = document.createElement("div");
+            courseTeacherName.classList.add("courseTeacherName");
+            courseTeacherName.textContent = info.lecture.teacher.teacherName;
+
+            const courseLecturePrice = document.createElement("div");
+            courseLecturePrice.classList.add("courseLecturePrice");
+            courseLecturePrice.textContent = info.lecture.price + "원";
+
+            userCourseGrid.appendChild(courseTeacherImgDiv);
+            courseTeacherImgDiv.appendChild(courseTeacherImg);
+            userCourseGrid.appendChild(courseTitle);
+            userCourseGrid.appendChild(courseTeacherName);
+            userCourseGrid.appendChild(courseLecturePrice);
+          });
+        });
+    }
+  });
 }
+
+/* 유저가 수강중인 강의 보기 모달 */
+
+const tbody = document.querySelector(".tbody");
+const modal = document.getElementById("courseModal");
+const closeButton = document.querySelector(".courseModalClose");
+
+closeButton.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
 // 강의별 수강중인 학생 목록 가져오기
 axios
@@ -188,29 +271,6 @@ document.querySelectorAll(".courseUserGrid").forEach((courseSection) => {
   });
 });
 
-/* 유저가 수강중인 강의 보기 모달 */
-
-const tbody = document.querySelector(".tbody");
-const modal = document.getElementById("courseModal");
-const closeButton = document.querySelector(".courseModalClose");
-
-tbody.addEventListener("click", function (event) {
-  const target = event.target;
-  if (target.classList.contains("adminUserId")) {
-    modal.style.display = "block";
-  }
-});
-
-closeButton.addEventListener("click", function () {
-  modal.style.display = "none";
-});
-
-modal.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
 /* 공지사항 등록 */
 
 // HTML 요소 선택
@@ -243,11 +303,9 @@ submitButton.addEventListener("click", () => {
     .then((response) => {
       console.log("데이터 저장 성공:", response);
       // 성공 시 추가 작업 (예: 알림 표시, 입력 필드 초기화 등)
-      alert(
-        `공지사항이 등록되었습니다. (등록 시간: ${new Date(
-          freeBoardTime
-        ).toLocaleString()})`
-      );
+      openModal(`공지사항이 등록되었습니다.`, () => {
+        window.location.href = "customer.html";
+      });
       noticeTitle.value = "";
       noticeContent.value = "";
     })

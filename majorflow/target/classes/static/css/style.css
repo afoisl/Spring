@@ -274,14 +274,15 @@ body {
 }
 .box3 {
   width: 100%;
-  height: 500px;
-  margin-top: 50px;
+  height: 305px;
+  margin-top: 0;
   background-image: url("/img/단체사진.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;
 }
+
 .wbox {
   width: 70%;
   margin: 0 auto;
@@ -299,10 +300,12 @@ body {
 .mainMenu > div {
   color: white;
   margin-top: 30px;
+  font-weight: bold;
 }
 
 .centerMenu {
   padding: 40px;
+  font-weight: bold;
 }
 
 /* padding 제거 오겸비 수정 */
@@ -375,8 +378,8 @@ body {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 110px;
+  height: 40px;
 }
 
 .mypageIcon {
@@ -655,8 +658,9 @@ body {
 .tasteCourse {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 125px;
-  margin-left: 103px;
+  gap: 20px 145px;
+  margin-left: 145px;
+  margin-bottom: 40px;
 }
 
 /* margin 오겸비 수정 */
@@ -683,9 +687,15 @@ body {
   border-radius: 15px;
 }
 
-.tasteName,
-.tasteTeacher {
+.tasteName {
   margin: 15px 0 0 10px;
+  font-family: "SUIT-Regular";
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.tasteTeacher {
+  margin: 10px 0 0 10px;
   font-family: "SUIT-Regular";
   font-size: 20px;
 }
@@ -786,7 +796,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: grey;
+  background: #0e0e0e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -996,15 +1006,52 @@ body {
 }
 
 .footer {
+  margin-top: 0; /* box3와 footer 사이 간격 제거 */
   text-align: center;
-  padding: 20px 0;
-  background-color: #f1f1f1;
+  padding: 40px 0 20px 0; /* 기본 패딩 설정 */
+  background-color: #222222;
 }
 
-.footer h3 {
+.footer-content {
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-circles {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* 텍스트와의 간격 조정 */
+}
+
+.footer-circle {
+  width: 40px; /* 크기를 더 크게 설정 */
+  height: 40px; /* 크기를 더 크게 설정 */
+  background-size: cover; /* 이미지가 요소 크기에 맞게 확대 */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.footer-circle.git {
+  background-image: url("/img/깃아이콘.png"); /* 깃아이콘 이미지 경로 */
+}
+
+.footer-circle.figma {
+  background-image: url("/img/피그마아이콘.png"); /* 피그마아이콘 이미지 경로 */
+}
+
+.footer-info {
+  text-align: center;
+  padding: 20px 0; /* 높이를 늘리기 위해 패딩 추가 */
+}
+
+.footer-info p {
   margin: 0;
   font-size: 16px;
-  color: #333;
+  color: #808080;
 }
 
 /* 모달창 스타일 추가 */
@@ -1254,15 +1301,6 @@ body {
   text-align: right;
   margin: 20px 0;
 }
-
-.footer {
-  width: 100%;
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
 /* new 수강신청 현황 */
 
 .myLectureBoxGrid {
@@ -1739,6 +1777,7 @@ body {
 .reviewWriteBtnWrapper {
   display: flex;
   justify-content: end;
+  margin: 0 80px 25px 0;
 }
 .star_rating {
   width: 100%;
@@ -1977,9 +2016,7 @@ body {
 .reviewWriteBtn,
 .moveToCartBtn,
 .cartBox6,
-.studyLectureBtn,
-.alertClose,
-#alertConfirm {
+.studyLectureBtn {
   font-family: "SUIT-Regular";
   width: 200px;
   font-size: 16px;
@@ -2012,9 +2049,7 @@ body {
 .moveToCartBtn:hover,
 .cartBox6:hover,
 .studyLectureBtn:hover,
-.progressStudyBtn:hover,
-.alertClose:hover,
-#alertConfirm:hover {
+.progressStudyBtn:hover {
   font-family: "SUIT-Regular";
   background-position: 100% 0;
   -moz-transition: all 0.4s ease-in-out;
@@ -2028,9 +2063,7 @@ body {
 .moveToCartBtn:focus,
 .cartBox6:focus,
 .studyLectureBtn:focus,
-.progressStudyBtn:focus,
-.alertClose:focus,
-#alertConfirm:focus {
+.progressStudyBtn:focus {
   outline: none;
 }
 
@@ -2048,58 +2081,100 @@ body {
 }
 
 .alertModal-content {
-  background-color: white;
-  height: 200px;
+  border: 1px solid #0e0e0e;
+  background-color: #fff;
+  height: 220px;
   margin: 15% auto;
   padding: 30px;
   width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
+  max-width: 400px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   align-items: center;
 }
 .alertModalBtn {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 20px 0;
-  grid-column-gap: 70px;
+  margin: 10px 30px;
+  justify-items: center;
+}
+
+.alertModalBtnLogin {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 #alertModalMessage {
+  font-family: "SUIT-Regular";
   font-size: 24px;
   text-align: center;
+  margin-top: 15px;
 }
 
 .alertClose {
+  font-family: "SUIT-Regular";
   color: #aaa;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 23px;
   font-weight: 50px;
   border-radius: 25px;
+  width: 80px;
+  height: 40px;
+  margin: 30px 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
-.alertClose:hover,
-.alertClose:focus {
-  color: black;
+.alertClose:hover {
+  font-family: "SUIT-Regular";
+  color: #0e0e0e;
   text-decoration: none;
   cursor: pointer;
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
+#alertConfirmLogin,
 #alertConfirm {
+  font-family: "SUIT-Regular";
   color: #aaa;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 23px;
   font-weight: 50px;
   border-radius: 25px;
+  width: 80px;
+  height: 40px;
+  margin: 30px 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
-#alertConfirm:hover,
-#alertConfirm:focus {
-  color: black;
+#alertConfirmLogin:hover,
+#alertConfirm:hover {
+  font-family: "SUIT-Regular";
+  color: #0e0e0e;
   text-decoration: none;
   cursor: pointer;
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.alertClose:focus,
+#alertConfirm:focus {
+  outline: none;
 }
 
 .hidden {

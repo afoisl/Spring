@@ -26,7 +26,7 @@ function closeModal() {
   alertModal.style.display = "none";
 }
 
-document.getElementById("alertConfirm").addEventListener("click", () => {
+document.getElementById("alertConfirmLogin").addEventListener("click", () => {
   closeModal();
 });
 
@@ -42,18 +42,20 @@ document.querySelector(".sign-inBx").addEventListener("click", () => {
       console.log("데이터: ", response);
       sessionCurrent();
       openModal("로그인이 완료되었습니다");
-      document.getElementById("alertConfirm").addEventListener("click", () => {
-        closeModal();
-        const previousPage = document.referrer;
-        console.log(previousPage);
-        const signupPage = "signup.html";
+      document
+        .getElementById("alertConfirmLogin")
+        .addEventListener("click", () => {
+          closeModal();
+          const previousPage = document.referrer;
+          console.log(previousPage);
+          const signupPage = "signup.html";
 
-        if (previousPage.includes(signupPage)) {
-          window.location.href = "index.html";
-        } else {
-          window.location.href = previousPage ? previousPage : "index.html";
-        }
-      });
+          if (previousPage.includes(signupPage)) {
+            window.location.href = "index.html";
+          } else {
+            window.location.href = previousPage ? previousPage : "index.html";
+          }
+        });
     })
     .catch((error) => {
       console.log("에러 발생: ", error);
