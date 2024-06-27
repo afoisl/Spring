@@ -173,7 +173,7 @@
   font-size: 30px;
   font-weight: 500;
   position: absolute;
-  bottom: -500px;
+  bottom: -480px;
   left: 0px;
   transform: translateX(-100%);
   opacity: 0;
@@ -913,7 +913,7 @@ body {
 /* padding-left 추가 오겸비 수정 */
 .noticeBox4 {
   font-size: 18px; /* 텍스트 크기 축소 */
-  height: 150px;
+  height: 140px;
   padding-left: 20px;
 }
 /* padding 추가 오겸비 수정 */
