@@ -310,15 +310,41 @@ table {
 
 .noticeWriteBox3 {
   width: 200px;
-  height: 70px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
   text-align: center;
-  margin-top: 40px;
-  padding: 15px;
-  font-size: 25px;
-  font-weight: bold;
+  line-height: 55px;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.noticeWriteBox3:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+noticeWriteBox3:focus {
+  outline: none;
 }
 
 .rightMenuBx {

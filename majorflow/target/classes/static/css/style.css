@@ -425,6 +425,7 @@ body {
 .teacher {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 60px;
 }
 
 .teacherInfo {
@@ -561,7 +562,7 @@ body {
 .textContainer {
   position: absolute;
   left: 20px; /* 좌측에서 20px 떨어진 위치 */
-  bottom: 40px; /* 아래에서 40px 떨어진 위치 */
+  bottom: 20px;
   color: white;
   font-weight: bold;
   transition: transform 0.3s ease; /* 위치 변경 애니메이션 */
@@ -580,6 +581,7 @@ body {
   font-weight: normal; /* 서브 텍스트 굵기 얇게 */
   opacity: 0; /* 기본 상태에서는 보이지 않음 */
   transition: opacity 0.3s ease; /* 자연스럽게 나타나는 애니메이션 */
+  margin-top: 10px;
 }
 
 .allCourseClick:hover .textContainer {
@@ -629,7 +631,8 @@ body {
 .tasteCourse {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 20px 125px;
+  margin-left: 103px;
 }
 
 /* margin 오겸비 수정 */
@@ -1618,7 +1621,7 @@ body {
 }
 .reviewBox7 {
   width: 100%;
-  height: 310px;
+  height: 315px;
   border-radius: 25px;
   background-color: #bbd0e9;
   padding: 15px;
@@ -1633,7 +1636,7 @@ body {
   height: 43px;
   text-align: center;
   line-height: 43px;
-  margin-top: 20px;
+  margin: 20px 0 0 15px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -1687,6 +1690,15 @@ body {
   font-weight: bold;
   font-size: 14px;
   margin: 0 15px 0 0;
+}
+.reviewBox9Grid-5 {
+  width: 80px;
+  height: 25px;
+  color: #3b3b3e;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 15px 0 15px;
 }
 .reviewBox9Grid-3 {
   width: 62px;
