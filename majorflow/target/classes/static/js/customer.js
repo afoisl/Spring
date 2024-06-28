@@ -191,6 +191,11 @@ function sessionCurrent() {
             authorityName: response.data.authority[0].authority,
           },
         };
+        document.querySelector(".menuLoginBtn").classList.add("hidden");
+        document.querySelector(".menuLogoutBtn").classList.remove("hidden");
+      } else {
+        document.querySelector(".menuLogoutBtn").classList.add("hidden");
+        document.querySelector(".menuLoginBtn").classList.remove("hidden");
       }
     })
     .catch((error) => {
