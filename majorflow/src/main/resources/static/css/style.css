@@ -403,16 +403,18 @@ body {
   background-color: gray;
   height: 400px;
   width: 500px;
-  margin: 30px 30px 30px 0px;
+  margin: 30px;
 }
 
 .historyBox1 {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 60px; /* 이미지와 연혁 텍스트 사이 간격 */
 }
 
 .historyText1 {
-  margin: 30px 20px 30px 40px;
+  margin: 80px 30px; /* 이미지와 텍스트 사이의 간격을 더 벌림 */
   font-size: 20px;
   line-height: 40px;
   font-family: "Noto Serif KR", serif;
@@ -420,11 +422,100 @@ body {
 }
 
 .historyText2 {
-  margin: 30px 20px 30px 0px;
+  margin: 30px;
   font-size: 20px;
   line-height: 40px;
   font-family: "Noto Serif KR", serif;
   font-weight: 500;
+}
+
+#history {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#history h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #444;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.list_right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.list_right span {
+  width: 20px;
+}
+
+.list_right div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.list_right div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #dfdfdf;
+  left: -10px;
+}
+
+.list_right div ul {
+  width: 100%;
+}
+
+.list_right div ul li {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.list_right div ul li + li {
+  margin-top: 20px;
+}
+
+.list_right div ul li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border: 3px solid #0a4a9f;
+  border-radius: 50%;
+  left: -20px;
+}
+
+.list_right dl {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list_right dl dt {
+  font-size: 20px;
+  color: #444;
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+
+.list_right dl dd {
+  font-size: 18px;
+  color: #444;
+  flex: 2;
+  text-align: left;
 }
 
 /* 강사진 페이지 설정*/
@@ -695,7 +786,7 @@ body {
 }
 
 .coursePriceGuide {
-  width: 90%;
+  width: 80%;
   height: 800px;
   margin: 0 auto;
   border-radius: 15px; /* 둥근 모서리 */
