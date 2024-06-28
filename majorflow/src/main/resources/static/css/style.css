@@ -835,10 +835,14 @@ body {
   background-color: #a0aec0;
   margin: 40px auto;
 }
-#priceGuide1,
+#priceGuide1 {
+  font-size: 70px;
+  margin: 20px 0 0 100px;
+  color: #333;
+}
 #priceGuide2 {
   font-size: 70px;
-  margin: 20px 0 10px 100px;
+  margin: 0 0 10px 100px;
   color: #333;
 }
 .priceGuide3 {
@@ -847,7 +851,7 @@ body {
   color: #555;
 }
 .priceGuide4 {
-  font-size: 90px;
+  font-size: 80px;
   margin: 0px 80px 10px 0px;
   font-weight: bold;
   display: flex;
@@ -856,7 +860,7 @@ body {
 }
 #priceGuide5 {
   font-size: 25px;
-  margin: 40px 80px;
+  margin: 40px 150px;
   display: flex;
   justify-content: end;
   color: #777;

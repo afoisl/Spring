@@ -216,6 +216,19 @@ function openModal(message, callback) {
   };
 }
 
+function openModalAlert(message, callback) {
+  const alertModal = document.getElementById("myAlertModal");
+  const alertModalMessage = document.getElementById("alertModalMessage");
+  alertModalMessage.textContent = message;
+  alertModal.style.display = "block";
+
+  const confirmButton = document.getElementById("alertConfirmLogin");
+  confirmButton.onclick = function () {
+    callback && callback(); // 콜백이 있을 경우 실행
+    closeModal(); // 모달 닫기
+  };
+}
+
 function closeModal() {
   const alertModal = document.getElementById("myAlertModal");
   alertModal.style.display = "none";
@@ -276,7 +289,7 @@ function setCommentModalEventListeners() {
   document.getElementById("commentSubmit").addEventListener("click", () => {
     const comment = document.getElementById("commentInput").value;
     if (comment) {
-      alert("댓글이 등록되었습니다: " + comment);
+      openModal("댓글이 등록되었습니다: " + comment);
       document.getElementById("commentInput").value = ""; // 댓글 입력창 초기화
       modal.classList.add("hidden");
       modal.style.display = "none";
