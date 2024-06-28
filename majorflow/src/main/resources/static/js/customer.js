@@ -280,9 +280,11 @@ function setCommentModalEventListeners() {
       document.getElementById("commentInput").value = ""; // 댓글 입력창 초기화
       modal.classList.add("hidden");
       modal.style.display = "none";
-    } else {
-      alert("댓글을 입력하세요.");
+      window.location.reload();
     }
+    // else {
+    //   alert("댓글을 입력하세요.");
+    // }
   });
 }
 
