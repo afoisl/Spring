@@ -414,7 +414,7 @@ body {
 }
 
 .historyText1 {
-  margin: 80px 30px; /* 이미지와 텍스트 사이의 간격을 더 벌림 */
+  margin: 60px 30px; /* 이미지와 텍스트 사이의 간격을 더 벌림 */
   font-size: 20px;
   line-height: 40px;
   font-family: "Noto Serif KR", serif;
@@ -441,6 +441,10 @@ body {
   color: #444;
   line-height: 1;
   margin: 20px 0;
+}
+
+.historyYear {
+  padding-bottom: 10px;
 }
 
 .list_right {
@@ -474,11 +478,12 @@ body {
 
 .list_right div ul {
   width: 100%;
+  list-style: none; /* 마커 제거 */
 }
 
 .list_right div ul li {
   position: relative;
-  padding: 10px 20px;
+  padding: 8px 10px;
 }
 
 .list_right div ul li + li {

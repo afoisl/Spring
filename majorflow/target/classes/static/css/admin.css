@@ -156,7 +156,8 @@ td {
   border: 1px solid black;
   text-align: center;
   height: 100px;
-  font-size: 24px;
+  font-size: 20px;
+  padding: 0 20px;
 }
 th {
   border: 1px solid black;
@@ -522,8 +523,16 @@ noticeWriteBox3:focus {
   outline: none;
 }
 
-.tbody {
-  font-size: 15px;
+.adminUserAddress,
+.adminUserName,
+.adminUserGenre {
+  font-size: 17px;
+}
+
+.adminUserName,
+.adminUserGenre {
+  padding: 0 20px;
+  font-weight: 600;
 }
 
 .hidden {
