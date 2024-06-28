@@ -203,11 +203,17 @@ function sessionCurrent() {
     });
 }
 
-function openModal(message) {
+function openModal(message, callback) {
   const alertModal = document.getElementById("myAlertModal");
   const alertModalMessage = document.getElementById("alertModalMessage");
   alertModalMessage.textContent = message;
   alertModal.style.display = "block";
+
+  const confirmButton = document.getElementById("alertConfirm");
+  confirmButton.onclick = function () {
+    callback && callback(); // 콜백이 있을 경우 실행
+    closeModal(); // 모달 닫기
+  };
 }
 
 function closeModal() {
@@ -215,36 +221,30 @@ function closeModal() {
   alertModal.style.display = "none";
 }
 
-// 로그아웃 버튼 클릭 시 확인 모달 열기
 document.querySelector(".menuLogoutBtn").addEventListener("click", () => {
-  openModal("로그아웃하시겠습니까?");
-});
-
-// 모달 내 확인 버튼 클릭 시 로그아웃 처리
-document.getElementById("alertConfirm").addEventListener("click", () => {
-  axios
-    .post(urlLogout, {}, { withCredentials: true })
-    .then((response) => {
-      console.log("데이터: ", response);
-      if (response.status == 200) {
-        openModal("로그아웃 되었습니다");
-        setTimeout(() => {
+  openModal("로그아웃하시겠습니까?", () => {
+    axios
+      .post(urlLogout, {}, { withCredentials: true })
+      .then((response) => {
+        console.log("데이터: ", response);
+        if (response.status == 200) {
+          openModal("로그아웃 되었습니다"); // 모달 열기
           closeModal();
-          // 로그아웃 성공 후의 추가 동작
+          // 여기에 로그아웃 성공 후의 추가 동작을 넣으세요
           document.querySelector(".menuLoginBtn").classList.remove("hidden");
           document.querySelector(".menuLogoutBtn").classList.add("hidden");
-          window.location.href = "login.html"; // 로그인 페이지로 이동
-        }, 2000); // 2초 후 모달 닫기
-      }
-    })
-    .catch((error) => {
-      console.log("에러 발생: ", error);
-      alert("로그아웃에 실패했습니다. 다시 시도해주세요.");
-    });
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.log("에러 발생: ", error);
+      });
+  });
 });
+
 // 모달 내 취소 버튼 클릭 시 모달 닫기
 document.querySelector(".alertClose").addEventListener("click", () => {
-  closeModal();
+  closeModal(); // 모달 닫기
 });
 
 function setCommentModalEventListeners() {
@@ -303,7 +303,7 @@ commentSubmit.addEventListener("click", () => {
       freeBoardId: boardContents[boardId].freeBoardId,
     },
   };
-  console.log("태스트: ", boardId, boardContents);
+  console.log("테스트: ", boardId, boardContents);
 
   axios
     .post("http://localhost:8080/reply/save", data, {

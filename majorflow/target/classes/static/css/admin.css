@@ -107,6 +107,7 @@ body {
 .subMenu > div:hover {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 .subMenu > div.active {
@@ -259,6 +260,7 @@ table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 .celloLectureUser,
 .pianoLectureUser,
