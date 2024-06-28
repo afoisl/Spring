@@ -522,6 +522,10 @@ noticeWriteBox3:focus {
   outline: none;
 }
 
+.tbody {
+  font-size: 15px;
+}
+
 .hidden {
   display: none;
 }
