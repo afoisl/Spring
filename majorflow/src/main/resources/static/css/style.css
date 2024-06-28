@@ -834,6 +834,7 @@ body {
 
 .noticeBox2 {
   width: 90%; /* 가로 길이 조정 */
+  height: 110px;
   border-radius: 25px;
   padding: 15px;
   margin: 0 60px;
@@ -1580,7 +1581,7 @@ body {
   justify-items: center;
 }
 .reviewBox4 {
-  width: 240px;
+  width: 300px;
   height: 47px;
   text-align: center;
   font-size: 30px;
