@@ -403,7 +403,7 @@ body {
   background-color: gray;
   height: 400px;
   width: 500px;
-  margin: 30px;
+  margin: 35px 30px 30px 30px;
 }
 
 .historyBox1 {
@@ -607,7 +607,7 @@ body {
 
 .singleTeacher1 > div {
   font-size: 20px;
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .singleTeacher2 > div {
@@ -751,8 +751,8 @@ body {
 .tasteCourse {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 145px;
-  margin-left: 145px;
+  gap: 20px 123px;
+  margin-left: 103px;
   margin-bottom: 40px;
 }
 
