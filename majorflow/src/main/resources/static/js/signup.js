@@ -352,3 +352,21 @@ var action_popup = {
     }, this.timer);
   },
 };
+
+function openModal(message, callback) {
+  const alertModal = document.getElementById("myAlertModal");
+  const alertModalMessage = document.getElementById("alertModalMessage");
+  alertModalMessage.textContent = message;
+  alertModal.style.display = "block";
+
+  const confirmButton = document.getElementById("alertConfirmLogin");
+  confirmButton.onclick = function () {
+    callback && callback(); // 콜백이 있을 경우 실행
+    closeModal(); // 모달 닫기
+  };
+}
+
+function closeModal() {
+  const alertModal = document.getElementById("myAlertModal");
+  alertModal.style.display = "none";
+}
