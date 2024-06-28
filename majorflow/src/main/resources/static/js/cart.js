@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
             );
             if (cartBox1) cartBox1.remove();
             closeModal(); // 모달 닫기
+            window.location.reload();
           })
           .catch((error) => {
             console.log("에러 발생:", error);
