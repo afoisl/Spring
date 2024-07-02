@@ -1,12 +1,15 @@
 package dw.gameshop.controller;
 
+import dw.gameshop.dto.BaseResponse;
 import dw.gameshop.dto.SessionDto;
 import dw.gameshop.dto.UserDto;
+import dw.gameshop.enumstatus.ResultCode;
 import dw.gameshop.service.UserDetailService;
 import dw.gameshop.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -34,22 +37,25 @@ public class UserController {
         this.httpServletRequest = httpServletRequest;
     }
 
-    @PostMapping("signup")
-    public ResponseEntity<String> signUp(@RequestBody UserDto userDto) {
-        return new ResponseEntity<>(userService.saveUser(userDto),
-                HttpStatus.CREATED);
+    @PostMapping("/signup")
+    public ResponseEntity<BaseResponse<String>> signUp(@Valid @RequestBody UserDto userDto) {
+        return new ResponseEntity<>(
+                new BaseResponse(ResultCode.SUCCESS.name(),
+                        userService.saveUser(userDto),
+                        ResultCode.SUCCESS.getMsg())
+                , HttpStatus.CREATED);
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody UserDto userDto,
                                         HttpServletRequest request) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(userDto.getUserId(), userDto.getPassword())
         );
         SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        HttpSession session = request.getSession(true);
-
+        // 세션 생성
+        HttpSession session = request.getSession(true); // true : 세션이 없으면 새로 생성
+        // 세션에 인증 객체 저장
         session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
                 SecurityContextHolder.getContext());
 
@@ -65,7 +71,7 @@ public class UserController {
         return "You have been logged out.";
     }
 
-    @GetMapping("current")
+    @GetMapping("/current")
     public SessionDto getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || !authentication.isAuthenticated()) {

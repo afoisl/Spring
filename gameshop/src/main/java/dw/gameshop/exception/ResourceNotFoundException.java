@@ -9,6 +9,7 @@ public class ResourceNotFoundException extends RuntimeException {
     private String resourceName;
     private String fieldName;
     private Object fieldValue;
+    private String message;
 
     public ResourceNotFoundException(String resourceName, String fieldName, Object fieldValue) {
         super(String.format("%s not found with %s : %s",
@@ -18,15 +19,14 @@ public class ResourceNotFoundException extends RuntimeException {
         this.fieldValue = fieldValue;
     }
 
-    public String getResourceName() {
-        return resourceName;
+    public ResourceNotFoundException(String message) {
+        super(message);
+        this.message = message;
     }
 
-    public String getFieldName() {
-        return fieldName;
-    }
-
-    public Object getFieldValue() {
-        return fieldValue;
+    @Override
+    public String getMessage() {
+        return message;
     }
 }
+
