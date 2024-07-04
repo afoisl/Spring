@@ -1,9 +1,9 @@
 package dw.majorflow.dto;
 
 import dw.majorflow.model.User;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+//import jakarta.validation.constraints.Email;
+//import jakarta.validation.constraints.NotBlank;
+//import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,36 +19,36 @@ import java.util.List;
 @Setter
 public class UserDto {
 
-    @NotBlank
+//    @NotBlank
     private String userId;
 
-    @NotBlank
+//    @NotBlank
     private String name;
 
-    @NotBlank
-    @Size(min = 6)
+//    @NotBlank
+//    @Size(min = 6)
     private String password;
 
-    @NotBlank
+//    @NotBlank
     private LocalDate birthDate;
 
-    @NotBlank
+//    @NotBlank
     private String phoneNumber;
 
-    @NotBlank
+//    @NotBlank
     private String address;
 
-    @NotBlank
+//    @NotBlank
     private List<String> gender;
 
-    @NotBlank
-    @Email
+//    @NotBlank
+//    @Email
     private String email;
 
-    @NotBlank
+//    @NotBlank
     private String nickname;
 
-    @NotBlank
+//    @NotBlank
     private List<String> genre;
 
 //    public static UserDto toUserDto(User user) {
