@@ -30,6 +30,4 @@ public class Reply {
 
     @Column
     private LocalDate replyTime;
-
-
 }

@@ -27,5 +27,4 @@ public class UserDetailService implements UserDetailsService {
         }
         return (UserDetails) user.get();
     }
-
 }
